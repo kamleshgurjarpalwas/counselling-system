@@ -5,7 +5,7 @@ const collegeSchema = new Schema(
   {
     collegeName: { type: String, required: true },
     collageMail: { type: String, required: true },
-    password: { type: String, required: true, ,selected: false },
+    password: { type: String, required: true, selected: false },
     address: {
       city: { type: String, required: true },
       state: { type: String, required: true },
