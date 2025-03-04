@@ -5,16 +5,11 @@ const update = new Schema(
   {
     title: { type: String, required: true },
     content: { type: String, required: true },
-    doneBy: { type: String, required: true },
-    tags: [
-      {
-        tagName: { type: String }
-      }
-    ]
+    doneBy: { type: mongoose.Schema.Types.ObjectId, ref: "Admin" },
   },
   { timestamp: true }
 );
 
-const updates = mongoose.model("Update", update);
+const updates = mongoose.model("Updates", update);
 
-module.export = updates;
+module.exports = updates;
