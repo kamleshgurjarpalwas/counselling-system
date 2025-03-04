@@ -29,6 +29,5 @@ routers.post(
   userController.loginuser
 );
 
-routers.get("/profile",userController.userprofile);
 
 module.exports = routers;

@@ -67,6 +67,3 @@ module.exports.loginuser = async (req, res, next) => {
   return res.status(200).json({ token, user });
 };
 
-model.exports.userprofile = async function (req, res) {
-  res.status(200).json(req.user);
-};
