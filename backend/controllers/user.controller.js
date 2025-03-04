@@ -68,6 +68,7 @@ module.exports.loginuser = async (req, res, next) => {
   return res.status(200).json({ user });
 };
 
+<<<<<<< HEAD
 module.exports.userprofile = async (req, res, next) => {
   return await res.status(200).json(req.user);
 };
@@ -80,3 +81,5 @@ module.exports.logout = async (req, res, next) => {
   res.clearCookie("token");
   res.status(200).json({ message: "Log out" });
 };
+=======
+>>>>>>> dilip
