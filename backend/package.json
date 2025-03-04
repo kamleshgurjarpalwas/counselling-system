@@ -20,12 +20,8 @@
     "express-validator": "^7.2.1",
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
-<<<<<<< HEAD
-    "mongoose": "^8.10.0",
     "mongoose-sequence": "^6.0.1",
-=======
     "mongoose": "^8.11.0",
->>>>>>> dilip
     "nodemon": "^3.1.9"
   }
 }

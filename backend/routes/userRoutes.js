@@ -33,10 +33,7 @@ routers.post(
   userController.loginuser
 );
 
-<<<<<<< HEAD
 routers.get("/profile", userAuthanticater.authUser, userController.userprofile);
 routers.get("/logout",userAuthanticater.authUser,userController.logout);
-=======
 
->>>>>>> dilip
 module.exports = routers;
