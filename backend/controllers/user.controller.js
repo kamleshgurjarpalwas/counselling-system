@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 const userModel = require("../models/user.model");
 const userService = require("../services/users.service");
-const { model } = require("mongoose");
+const blankList = require("../models/blankList.model");
 
 module.exports.registeruser = async (req, res, next) => {
   const errors = validationResult(req);
@@ -9,29 +9,32 @@ module.exports.registeruser = async (req, res, next) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-  console.log("This is data", req.body);
 
-  const { name, email, password } = req.body;
+  const { name, email, password, roll } = req.body;
 
-  const isUserAlreadyExist = await userModel.findOne({ email });
+  const isUserExist = await userModel.findOne({ roll });
 
-  if (isUserAlreadyExist) {
-    return res.status(400).json({ message: "User already exist" });
+  if (isUserExist) {
+    if (
+      isUserExist.email != email ||
+      isUserExist.name.toLowerCase() != name.toLowerCase()
+    ) {
+      return res.status(401).json({ message: "Recheck roll,name or email" });
+    }
+
+    if (isUserExist.isRegistered === true) {
+      return res.status(401).json({ message: "User already register." });
+    }
+
+    try {
+      const hashedPassword = await userModel.hashPassword(password);
+      await userService.register(isUserExist, hashedPassword);
+      const token = isUserExist.generateAuthToken();
+      return res.status(201).json({ token, isUserExist });
+    } catch (err) {
+      return res.status(500).json({ message: "Internal Server Error" });
+    }
   }
-
-  const hashedPassword = await userModel.hashPassword(password);
-
-  const user = await userService.createUser({
-    name,
-    email,
-    password: hashedPassword,
-  });
-
-  const token = user.generateAuthToken();
-
-  console.log("user", user);
-
-  return res.status(201).json({ token, user });
 };
 
 module.exports.loginuser = async (req, res, next) => {
@@ -41,13 +44,12 @@ module.exports.loginuser = async (req, res, next) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  console.log("This is data", req.body);
 
   const { email, password } = req.body;
 
   const user = await userModel.findOne({ email }).select("+password");
 
-  if (!user) {
+  if (!user || user.isRegistered != true) {
     return res.status(401).json({ message: "Invalid email or password" });
   }
 
@@ -60,13 +62,21 @@ module.exports.loginuser = async (req, res, next) => {
   user.password = undefined;
 
   const token = user.generateAuthToken();
-  req.cookie("token", token);
+  res.cookie("token", token);
 
-  console.log("user", user);
 
-  return res.status(200).json({ token, user });
+  return res.status(200).json({ user });
 };
 
-model.exports.userprofile = async function (req, res) {
-  res.status(200).json(req.user);
+module.exports.userprofile = async (req, res, next) => {
+  return await res.status(200).json(req.user);
+};
+
+module.exports.logout = async (req, res, next) => {
+  const token = req.cookies.token || req.headers.authorization.split(" ")[1];
+
+  await blankList.create({ token });
+
+  res.clearCookie("token");
+  res.status(200).json({ message: "Log out" });
 };
