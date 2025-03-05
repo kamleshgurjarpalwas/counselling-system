@@ -1,8 +1,8 @@
 const express = require("express");
 const routers = express.Router();
-const updateController = require("../controllers/latestUpdate.controller");
+const updateController = require("../../controllers/latestUpdateControllers/latestUpdate.controller");
 const { body } = require("express-validator");
-const autAdmin = require("../middleware/authAdmin.middleware");
+const autAdmin = require("../../middleware/authAdmin.middleware");
 
 routers.get("/", updateController.showUpdates);
 

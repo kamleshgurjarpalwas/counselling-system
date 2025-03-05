@@ -1,4 +1,4 @@
-const userModel = require("../models/user.model");
+const userModel = require("../models/userModels/user.model");
 
 module.exports.createUser = async function ({ name, email, password }) {
   const user = userModel.create({ name, email, password });
@@ -6,7 +6,7 @@ module.exports.createUser = async function ({ name, email, password }) {
 };
 
 //This is for registering user
-module.exports.register = async function ({ isUserExist, hashedPassword }) {
+module.exports.register = async function (isUserExist, hashedPassword) {
   isUserExist.password = hashedPassword;
   isUserExist.isRegistered = true;
   await isUserExist.save();

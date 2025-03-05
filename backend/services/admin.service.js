@@ -1,4 +1,4 @@
-const adminModel = require("../models/admin.model");
+const adminModel = require("../models/adminModels/admin.model");
 
 module.exports.createAdmin = async function (name, email, password) {
   const user = await adminModel.create({ name, email, password });
