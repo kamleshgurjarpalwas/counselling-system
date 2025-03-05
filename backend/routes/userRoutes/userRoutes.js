@@ -1,8 +1,8 @@
 const express = require("express");
 const routers = express.Router();
 const { body } = require("express-validator");
-const userController = require("../controllers/user.controller");
-const userAuthanticater = require("../middleware/authUser.middleware");
+const userController = require("../../controllers/userControllers/user.controller");
+const userAuthanticater = require("../../middleware/authUser.middleware");
 
 routers.post(
   "/register",

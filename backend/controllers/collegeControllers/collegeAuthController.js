@@ -37,7 +37,6 @@ exports.registerCollege = async (req, res) => {
         }
         const registrationId = await generateRegistrationId(collegeId);
         
-        console.log(req.body);
 
         const newCollege = new CollegeAuth({
             registrationId,
@@ -61,13 +60,6 @@ exports.registerCollege = async (req, res) => {
         
         res.status(201).json({
             message: "College registered successfully",
-            college: {
-                registrationId,
-                collegeId,
-                collegeTag,
-                collegeName,
-                collegeMail,
-            },
         });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message });
@@ -110,13 +102,6 @@ exports.loginCollege = async (req, res) => {
 
         res.status(200).json({
             message: "Login successful",
-            college: {
-                registrationId: college.registrationId,
-                collegeId: college.collegeId,
-                collegeTag: college.collegeTag,
-                collegeName: college.collegeName,
-                collegeMail: college.collegeMail,
-            },
         });
     } catch (error) {
         res.status(500).json({ message: "Internal Server Error", error: error.message });
