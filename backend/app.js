@@ -18,7 +18,10 @@ const collegeProfileRoutes = require("./routes/collegeRoutes/collegeProfileRoute
 const collegeInfoRoutes = require('./routes/collegeRoutes/collegeInfoRoutes.js')
 const branchRoutes = require('./routes/branchRoutes.js')
 
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173", 
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieparser());
@@ -38,7 +41,6 @@ app.use("/update", updateRotes);
 
 
 // dilip routing 
-app.use("/user",userRouters);
 app.use("/api/colleges-info", collegeInfoRoutes);
 app.use("/api/colleges/auth", collegeAuthRoutes);
 app.use("/api/college", collegeProfileRoutes);

@@ -30,6 +30,7 @@ module.exports.registeruser = async (req, res, next) => {
       const hashedPassword = await userModel.hashPassword(password);
       await userService.register(isUserExist, hashedPassword);
       const token = isUserExist.generateAuthToken();
+    
       return res.status(201).json({ token, isUserExist });
     } catch (err) {
       return res.status(500).json({ message: "Internal Server Error" });
