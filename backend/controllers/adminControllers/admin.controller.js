@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
-const adminService = require("../services/admin.service");
-const adminModel = require("../models/admin.model");
-const blankList = require("../models/blankList.model");
+const adminService = require("../../services/admin.service");
+const adminModel = require("../../models/adminModels/admin.model");
+const blankList = require("../../models/blankList.model");
 
 module.exports.register = async function (req, res, next) {
   const errors = validationResult(req);

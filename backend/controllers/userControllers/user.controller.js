@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
-const userModel = require("../models/user.model");
-const userService = require("../services/users.service");
-const blankList = require("../models/blankList.model");
+const userModel = require("../../models/userModels/user.model");
+const userService = require("../../services/users.service");
+const blankList = require("../../models/blankList.model");
 
 module.exports.registeruser = async (req, res, next) => {
   const errors = validationResult(req);
@@ -26,8 +26,11 @@ module.exports.registeruser = async (req, res, next) => {
       return res.status(401).json({ message: "User already register." });
     }
 
+    console.log("You are before the try");
+
     try {
       const hashedPassword = await userModel.hashPassword(password);
+      console.log("This is hased password",hashedPassword);
       await userService.register(isUserExist, hashedPassword);
       const token = isUserExist.generateAuthToken();
     
