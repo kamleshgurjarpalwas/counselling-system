@@ -46,7 +46,7 @@ export default function Register() {
         data
       );
       toast.success(res.data.message || "Registration successful!");
-      form.reset(); // Reset form on successful registration
+      form.reset(); 
     } catch (error) {
       toast.error(error.response?.data?.message || "Registration failed");
     }

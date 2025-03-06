@@ -13,10 +13,10 @@ const adminRoutes = require("./routes/adminRoutes/admin.route.js");
 const updateRotes = require("./routes/latestRoutes/latestUpdate.route.js");
 
 // dilip routes
-const collegeAuthRoutes = require("./routes/collegeRoutes/collegeAuthRoutes.js");
-const collegeProfileRoutes = require("./routes/collegeRoutes/collegeProfileRoutes.js");
-const collegeInfoRoutes = require("./routes/collegeRoutes/collegeInfoRoutes.js");
-const branchRoutes = require("./routes/collegeRoutes/branchRoutes.js");
+const collegeAuthRoutes = require("./routes/collegeRoutes/collegeAuthRoutes.js")
+const collegeProfileRoutes = require("./routes/collegeRoutes/collegeProfileRoutes.js")
+const collegeInfoRoutes = require('./routes/collegeRoutes/collegeInfoRoutes.js')
+const branchRoutes = require('./routes/collegeRoutes/branchRoutes.js')
 
 app.use(cors({
   origin: "http://localhost:5173", 

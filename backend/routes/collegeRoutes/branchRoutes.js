@@ -5,10 +5,9 @@ const router = express.Router();
 
 router.get("/", branchController.getAllBranches);
 
-router.get("/:collegeId", branchController.getBranchesByCollege);
+router.get("/colleges/:branchId", branchController.getCollegesByBranch);
 
-router.post("/:collegeId", branchController.addBranchToCollege);
+module.exports = router;
 
-router.delete("/:collegeId/:branchId", branchController.deleteBranchFromCollege);
 
 module.exports = router;
