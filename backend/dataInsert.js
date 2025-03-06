@@ -15,6 +15,7 @@ const insertData = async () => {
 
     await Branch.deleteMany({});
     await College.deleteMany({});
+
     console.log("Previous data cleared from College and Branch collections.");
 
     for (const collegeData of data) {
@@ -68,3 +69,4 @@ const insertData = async () => {
 };
 
 insertData();
+

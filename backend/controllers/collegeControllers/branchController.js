@@ -4,87 +4,65 @@ const mongoose = require("mongoose");
 
 exports.getAllBranches = async (req, res) => {
   try {
-    const colleges = await College.find().populate("branches.branchDetails");
-    let allBranches = [];
+    const branches = await Branch.find({}, "branchId branchName duration description restrictions");
 
-    colleges.forEach(college => {
-      college.branches.forEach(branch => {
-        allBranches.push({
-          collegeId: college.collegeId,
-          collegeName: college.collegeName,
-          ...branch._doc 
-        });
-      });
+    if (!branches.length) {
+      return res.status(404).json({ success: false, message: "No branches found" });
+    }
+
+    res.status(200).json({
+      success: true,
+      totalBranches: branches.length,
+      data: branches,
     });
-
-    res.status(200).json(allBranches);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: "Server Error", error: error.message });
   }
 };
 
-exports.getBranchesByCollege = async (req, res) => {
+
+
+exports.getCollegesByBranch = async (req, res) => {
   try {
-    const college = await College.findOne({ collegeId: req.params.collegeId }).populate("branches.branchDetails");
+    const { branchId } = req.params;
 
-    if (!college) {
-      return res.status(404).json({ message: "College not found" });
+    if (!branchId) {
+      return res.status(400).json({ success: false, message: "Branch ID is required" });
     }
 
-    res.status(200).json(college.branches);
+    if (!mongoose.Types.ObjectId.isValid(branchId)) {
+      return res.status(400).json({ success: false, message: "Invalid Branch ID format" });
+    }
+
+    const colleges = await College.find({ "branches.branchDetails": branchId })
+      .select("collegeId collegeName -_id branches")
+      .populate({
+        path: "branches.branchDetails",
+        select: "branchId branchName duration description",
+      });
+
+    if (!colleges.length) {
+      return res.status(404).json({ success: false, message: "No colleges found for this branch" });
+    }
+
+    const filteredColleges = colleges.map((college) => ({
+      collegeId: college.collegeId,
+      collegeName: college.collegeName,
+      branch: college.branches.filter((branch) => branch.branchDetails?._id.toString() === branchId)
+      .map((filteredBranch) => ({
+        branchId: filteredBranch.branchDetails?.branchId || null,
+        branchName: filteredBranch.branchDetails?.branchName || null,
+        duration: filteredBranch.branchDetails?.duration || null,
+        description: filteredBranch.branchDetails?.description || null,
+      }))[0],
+    }));
+
+    res.status(200).json({
+      success: true,
+      totalColleges: colleges.length,
+      data: filteredColleges,
+    });
   } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
-exports.addBranchToCollege = async (req, res) => {
-  try {
-    const { collegeId } = req.params;
-    const { branchId, otherState, homeState } = req.body;
-
-    const college = await College.findOne({ collegeId });
-
-    if (!college) {
-      return res.status(404).json({ message: "College not found" });
-    }
-
-    const branchDetails = await Branch.findOne({ branchId });
-
-    if (!branchDetails) {
-      return res.status(404).json({ message: "Branch not found" });
-    }
-
-    const newBranch = {
-      _id: new mongoose.Types.ObjectId(),
-      branchDetails: branchDetails._id,
-      otherState,
-      homeState
-    };
-
-    college.branches.push(newBranch);
-    await college.save();
-
-    res.status(201).json({ message: "Branch added successfully", newBranch });
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-};
-
-exports.deleteBranchFromCollege = async (req, res) => {
-  try {
-    const { collegeId, branchId } = req.params;
-
-    const college = await College.findOne({ collegeId });
-
-    if (!college) {
-      return res.status(404).json({ message: "College not found" });
-    }
-
-    college.branches = college.branches.filter(branch => branch._id.toString() !== branchId);
-
-    await college.save();
-    res.status(200).json({ message: "Branch deleted successfully" });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: "Server Error", error: error.message });
   }
 };
