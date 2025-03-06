@@ -1,5 +1,5 @@
-const updateModel = require("../models/latestUpdate.model");
-const updateServices = require("../services/latestUpdate.service");
+const updateModel = require("../../models/latestUpdateModels/latestUpdate.model");
+const updateServices = require("../../services/latestUpdate.service");
 const { validationResult } = require("express-validator");
 module.exports.pushUpdate = async (req, res, next) => {
   const errors = validationResult(req);

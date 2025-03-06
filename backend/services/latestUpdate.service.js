@@ -1,4 +1,4 @@
-const update = require("../models/latestUpdate.model");
+const update = require("../models/latestUpdateModels/latestUpdate.model");
 const adminService = require("./admin.service");
 
 module.exports.createUpdate = async (doneBy, title, content) => {
