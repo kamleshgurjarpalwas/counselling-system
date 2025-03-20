@@ -10,8 +10,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Menu, ChevronDown } from "lucide-react";
+
+import LoginPopUp from "../HomePageComponents/loginPopUp";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -69,7 +77,10 @@ const Navbar = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="relative bg-white shadow-lg rounded-md mt-2 w-40">
                     {item.dropdown.map((subItem, subIndex) => (
-                      <DropdownMenuItem key={subIndex} className="mt-1 mb-1 hover:bg-blue-600">
+                      <DropdownMenuItem
+                        key={subIndex}
+                        className="mt-1 mb-1 hover:bg-blue-600"
+                      >
                         <Link to={subItem.path}>{subItem.name}</Link>
                       </DropdownMenuItem>
                     ))}
@@ -77,14 +88,18 @@ const Navbar = () => {
                 </DropdownMenu>
               </div>
             ) : (
-              <li key={index} className="py-4 cursor-pointer hover:text-blue-600">
+              <li
+                key={index}
+                className="py-4 cursor-pointer hover:text-blue-600"
+              >
                 <Link to={item.path}>{item.name}</Link>
               </li>
             )
           )}
         </ul>
-
-        <Dialog open={isLoginOpen} onOpenChange={setIsLoginOpen}>
+        <LoginPopUp />
+        {/* open={isLoginOpen} onOpenChange={setIsLoginOpen} */}
+        {/* <Dialog >
           <DialogTrigger asChild>
             <Button className="hidden md:block border-2 cursor-pointer h-full rounded-none text-blue-600 border-blue-600 bg-transparent hover:bg-blue-600  hover:text-white duration-100">
               Student Login
@@ -118,7 +133,7 @@ const Navbar = () => {
               </Button>
             </div>
           </DialogContent>
-        </Dialog>
+        </Dialog> */}
 
         <div className="md:hidden flex justify-between w-full items-center">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -187,22 +202,42 @@ const Navbar = () => {
                 </DialogTitle>
               </DialogHeader>
               <div className="space-y-4">
-                <Label htmlFor="mobile-application-number">Application Number</Label>
-                <Input  className="rounded-none" id="mobile-application-number" type="text" placeholder="Enter Application Number" />
+                <Label htmlFor="mobile-application-number">
+                  Application Number
+                </Label>
+                <Input
+                  className="rounded-none"
+                  id="mobile-application-number"
+                  type="text"
+                  placeholder="Enter Application Number"
+                />
                 <Label htmlFor="mobile-password">Password</Label>
-                <Input className="rounded-none"  id="mobile-password" type="password" placeholder="Enter Password" />
+                <Input
+                  className="rounded-none"
+                  id="mobile-password"
+                  type="password"
+                  placeholder="Enter Password"
+                />
                 <div className="flex justify-between text-sm">
-                <Link to="/forgot-password" onClick={()=>isLoginOpen(false)} className="text-blue-500 hover:underline">
-                  Forgot Password?
-                </Link>
-                <Link to="/register" onClick={()=>isLoginOpen(false)} className="text-blue-500 hover:underline">
-                  New Student? Register
-                </Link>
+                  <Link
+                    to="/forgot-password"
+                    onClick={() => isLoginOpen(false)}
+                    className="text-blue-500 hover:underline"
+                  >
+                    Forgot Password?
+                  </Link>
+                  <Link
+                    to="/register"
+                    onClick={() => isLoginOpen(false)}
+                    className="text-blue-500 hover:underline"
+                  >
+                    New Student? Register
+                  </Link>
+                </div>
+                <Button className="w-full rounded-none cursor-pointer bg-blue-500 hover:bg-blue-600 text-white">
+                  Login
+                </Button>
               </div>
-              <Button className="w-full rounded-none cursor-pointer bg-blue-500 hover:bg-blue-600 text-white">
-                Login
-              </Button>
-            </div>
             </DialogContent>
           </Dialog>
         </div>

@@ -7,28 +7,31 @@ const express = require("express");
 const cookieparser = require("cookie-parser");
 const app = express();
 
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+
 //kamlesh routes
 const userRouters = require("./routes/userRoutes/userRoutes.js");
 const adminRoutes = require("./routes/adminRoutes/admin.route.js");
 const updateRotes = require("./routes/latestRoutes/latestUpdate.route.js");
 
 // dilip routes
-const collegeAuthRoutes = require("./routes/collegeRoutes/collegeAuthRoutes.js")
-const collegeProfileRoutes = require("./routes/collegeRoutes/collegeProfileRoutes.js")
-const collegeInfoRoutes = require('./routes/collegeRoutes/collegeInfoRoutes.js')
-const branchRoutes = require('./routes/collegeRoutes/branchRoutes.js')
+const collegeAuthRoutes = require("./routes/collegeRoutes/collegeAuthRoutes.js");
+const collegeProfileRoutes = require("./routes/collegeRoutes/collegeProfileRoutes.js");
+const collegeInfoRoutes = require("./routes/collegeRoutes/collegeInfoRoutes.js");
+const branchRoutes = require("./routes/collegeRoutes/branchRoutes.js");
 
-app.use(cors({
-  origin: "http://localhost:5173", 
-  credentials: true
-}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieparser());
 connectDB();
 
 app.get("/", (req, res) => {
-  res.send("Sab theek hai, aage chalooo");
+  res.status(200).json({ message: "Sab theek hai, aage chalooo" });
 });
 
 // kamlesh routing

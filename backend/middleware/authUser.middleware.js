@@ -5,23 +5,31 @@ const jwt = require("jsonwebtoken");
 const blankList = require("../models/blankList.model");
 
 module.exports.authUser = async function (req, res, next) {
-  const token = req.cookies.token || req.cookies.authorization?.splite(" ")[1];
+  const token = req.cookies.token || req.cookies.authorization?.split(" ")[1];
+  
   if (!token) {
-    res.status(400).json({ message: "unauthorized user" });
-  }
-
-  const isBlankListed = blankList.findOne({ token });
-
-  if (isBlankListed) {
-    res.status(400).json({ message: "unauthorized user" });
+    return res.status(400).json({ message: "Unauthorized user" });
   }
 
   try {
-    const decode = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await userModel.findOne({ _id: decode.id_ });
+    const isBlankListed = await blankList.findOne({ token });
+    
+    if (isBlankListed) {
+      return res.status(400).json({ message: "Unauthorized user" });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    
+    const user = await userModel.findOne({ _id: decoded.id_ });
+    
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
     req.user = user;
+    
     return next();
   } catch (error) {
-    res.status(401).json({ message: "unauthorized user1" });
+    return res.status(401).json({ message: "Unauthorized user" });
   }
 };

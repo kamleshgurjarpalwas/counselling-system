@@ -72,8 +72,10 @@ module.exports.loginuser = async (req, res, next) => {
   return res.status(200).json({ user });
 };
 
-module.exports.userprofile = async (req, res, next) => {
-  return await res.status(200).json(req.user);
+module.exports.userprofile = (req, res, next) => {
+  console.log("You are in user profile controller......");
+  const user = req.user;
+  return res.status(200).json({user});
 };
 
 module.exports.logout = async (req, res, next) => {
