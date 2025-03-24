@@ -3,6 +3,8 @@ const collegeController = require("../../controllers/collegeControllers/collegeI
 
 const router = express.Router();
 
+router.get("/test", collegeController.test)
+
 router.get("/all-choices", collegeController.getAllChoices);
 
 router.get("/alldetails", collegeController.getAllColleges);

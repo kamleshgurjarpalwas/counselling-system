@@ -1,23 +1,16 @@
 const College = require("../../models/collegeModels/collegeInfo.model");
+const Branch = require("../../models/collegeModels/branch.model");
 
 exports.getAllColleges = async (req, res) => {
   try {
-    let { page = 1, limit = 10, sortBy = "collegeName", order = "asc", search, state, tag, year } = req.query;
+    let { page = 1, limit = 10, tag, year } = req.query;
 
     page = parseInt(page);
     limit = parseInt(limit);
-    order = order === "desc" ? -1 : 1;
     year = year ? parseInt(year) : new Date().getFullYear();
 
     const query = {};
-    if (state) query["address.state"] = state;
     if (tag) query.tag = tag;
-    if (search) {
-      query.$or = [
-        { collegeName: new RegExp(search, "i") },
-        { collegeId: new RegExp(search, "i") },
-      ];
-    }
 
     const [totalColleges, colleges] = await Promise.all([
       College.countDocuments(query),
@@ -26,7 +19,6 @@ exports.getAllColleges = async (req, res) => {
           path: "branches.branchDetails",
           select: "branchId branchName duration description restrictions",
         })
-        .sort({ [sortBy]: order })
         .skip((page - 1) * limit)
         .limit(limit)
         .select("collegeId collegeName tag address branches restrictions")
@@ -72,57 +64,210 @@ exports.getAllColleges = async (req, res) => {
 
 
 exports.getCollegeList = async (req, res) => {
-  
   try {
-    let { tag, state, page, limit, search } = req.query;
+    let { collegeType, collegeId, branchId, category, year, page, limit } = req.query;
 
-    page = parseInt(page) || 1;
-    limit = parseInt(limit) || 10;
-    const skip = (page - 1) * limit;
+    if (collegeType && collegeId && branchId && category && year) {
 
-    let filter = {};
+      year = year ? parseInt(year) : new Date().getFullYear();
 
-    if (tag) filter.tag = tag;
-    if (state) filter["address.state"] = state;
-    if (search) {
-      filter.$or = [
-        { collegeId: { $regex: search, $options: "i" } },
-        { collegeName: { $regex: search, $options: "i" } }
-      ];
-    }
+      page = parseInt(page) || 1;
+      limit = parseInt(limit) || 30;
 
-    const totalColleges = await College.countDocuments(filter);
-    const totalPages = Math.ceil(totalColleges / limit);
+      let query = {};
+      if (collegeType && collegeType !== "all") query.tag = collegeType;
+      if (collegeId && collegeId !== "all") query.collegeId = collegeId;
 
-    const colleges = await College.find(filter, "tag collegeId collegeName address.state")
-      .skip(skip)
-      .limit(limit);
+      const colleges = await College.find(query)
+        .populate({
+          path: "branches.branchDetails",
+          select: "branchId branchName -_id",
+        })
+        .lean();
 
-    if (!colleges.length) {
-      return res.status(404).json({ message: "Colleges not found" });
-    }
+      if (!colleges.length) {
+        return res.status(404).json({ success: false, message: "No colleges found" });
+      }
 
-    const formattedColleges = colleges.map(college => ({
-      tag: college.tag,
-      collegeId: college.collegeId,
-      collegeName: college.collegeName,
-      collegeState: college.address.state,
-    }));
+      let results = [];
 
-    res.status(200).json({
-      success: true,
-      data: formattedColleges,
-      pagination: {
-        totalColleges,
+      colleges.forEach((college) => {
+        let filteredBranches = college.branches.filter((branch) => {
+          return branchId === "all" || branch.branchDetails?.branchId === branchId;
+        });
+
+        if (filteredBranches.length === 0) return;
+
+        let collegeData = {
+          collegeId: college.collegeId,
+          collegeName: college.collegeName,
+          branches: [],
+        };
+
+        filteredBranches.forEach((branch) => {
+          let branchData = {
+            branchId: branch.branchDetails?.branchId || null,
+            branchName: branch.branchDetails?.branchName || null,
+            categories: {},
+          };
+
+          let categoriesToCheck = category !== "all" ? [category] : ["gen", "obc", "ews", "sc", "st"];
+
+          categoriesToCheck.forEach((cat) => {
+            let homeStateData = branch.homeState?.[cat]?.filter((r) => r.year === year) || [];
+            let otherStateData = branch.otherState?.[cat]?.filter((r) => r.year === year) || [];
+
+            branchData.categories[cat] = {
+              homeState: {
+                totalSeats: homeStateData.reduce((sum, r) => sum + r.totalSeats, 0),
+                openingRank: homeStateData.length ? Math.min(...homeStateData.map((r) => r.openingRank)) : null,
+                closingRank: homeStateData.length ? Math.max(...homeStateData.map((r) => r.closingRank)) : null,
+              },
+              otherState: {
+                totalSeats: otherStateData.reduce((sum, r) => sum + r.totalSeats, 0),
+                openingRank: otherStateData.length ? Math.min(...otherStateData.map((r) => r.openingRank)) : null,
+                closingRank: otherStateData.length ? Math.max(...otherStateData.map((r) => r.closingRank)) : null,
+              },
+            };
+          });
+
+          collegeData.branches.push(branchData);
+        });
+
+        results.push(collegeData);
+      });
+
+      // Implement Pagination
+      const totalResults = results.length;
+      const totalPages = Math.ceil(totalResults / limit);
+      const paginatedResults = results.slice((page - 1) * limit, page * limit);
+
+      res.status(200).json({
+        success: true,
+        totalResults,
         totalPages,
         currentPage: page,
-        limit,
-      },
-    });
+        pageSize: limit,
+        data: paginatedResults,
+      });
+    } else {
+
+
+      if (collegeId) {
+        if (collegeType === "all" && collegeId === "all") {
+          const branches = await Branch.find({}, "branchId branchName -_id").lean();
+          return res.status(200).json({
+            success: true,
+            totalBranches: branches.length,
+            data: branches,
+          });
+        }
+
+        if (collegeType === "all" && collegeId !== "all") {
+          const college = await College.findOne({ collegeId }, "branches").populate({
+            path: "branches.branchDetails",
+            select: "branchId branchName -_id",
+          });
+
+          if (!college) {
+            return res.status(404).json({
+              success: false,
+              message: "College not found",
+            });
+          }
+
+          const branches = college.branches.map(branch => ({
+            branchId: branch.branchDetails?.branchId || "",
+            branchName: branch.branchDetails?.branchName || "",
+          }));
+
+          return res.status(200).json({
+            success: true,
+            totalBranches: branches.length,
+            data: branches,
+          });
+
+        }
+
+        if (collegeType !== "all" && collegeId === "all") {
+          const colleges = await College.find({ tag: collegeType }, "branches").populate({
+            path: "branches.branchDetails",
+            select: "branchId branchName -_id",
+          });
+
+          let allBranches = new Map();
+
+          colleges.forEach(college => {
+            college.branches.forEach(branch => {
+              if (branch.branchDetails) {
+                const { branchId, branchName } = branch.branchDetails;
+                if (!allBranches.has(branchId)) {
+                  allBranches.set(branchId, { branchId, branchName });
+                }
+              }
+            });
+          });
+
+          return res.status(200).json({
+            success: true,
+            totalBranches: allBranches.size,
+            data: Array.from(allBranches.values()),
+          });
+        }
+
+        if (collegeType !== "all" && collegeId !== "all") {
+          const college = await College.findOne({ collegeId, tag: collegeType }, "branches").populate({
+            path: "branches.branchDetails",
+            select: "branchId branchName -_id",
+          });
+
+          if (!college) {
+            return res.status(404).json({
+              success: false,
+              message: "No matching college found for the given type and ID",
+            });
+          }
+
+          const branches = college.branches.map(branch => ({
+            branchId: branch.branchDetails?.branchId || "",
+            branchName: branch.branchDetails?.branchName || "",
+          }));
+
+          return res.status(200).json({
+            success: true,
+            totalBranches: branches.length,
+            data: branches,
+          });
+        }
+      }
+
+      let filter = {};
+
+      if (collegeType === "all") {
+        filter = {};
+      } else {
+        filter.tag = collegeType;
+      }
+
+      const colleges = await College.find(filter, "tag collegeId collegeName -_id").lean();
+
+      return res.status(200).json({
+        success: true,
+        totalColleges: colleges.length,
+        data: colleges,
+      });
+    }
   } catch (error) {
-    res.status(500).json({ message: "Server Error", error: error.message });
+    console.error("Error fetching college list:", error);
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+      error: error.message,
+    });
   }
 };
+
+
 
 exports.getCollegeById = async (req, res) => {
   try {
@@ -221,7 +366,7 @@ exports.getAllChoices = async (req, res) => {
     const currentYear = new Date().getFullYear();
 
     let filter = {};
-    
+
     if (tag) filter["tag"] = new RegExp(tag, "i");
     if (collegeName) filter["collegeName"] = new RegExp(collegeName, "i");
 
@@ -291,3 +436,106 @@ const filterByYear = (stateData, year) => {
   return filteredState;
 };
 
+const buildQuery = (query) => {
+  let filter = {};
+
+  if (query.collegeId && query.collegeId !== "ALL") {
+    filter.collegeId = query.collegeId;
+  }
+
+  if (query.collegeType && query.collegeType !== "ALL") {
+    filter.tag = query.collegeType;
+  }
+
+  return filter;
+};
+
+exports.test = async (req, res) => {
+  try {
+    let { collegeType, collegeId, branchId, category, year, page, limit } = req.query;
+
+    year = year ? parseInt(year) : new Date().getFullYear();
+    page = parseInt(page) || 1;
+    limit = parseInt(limit) || 30;
+
+    let query = {};
+    if (collegeType && collegeType !== "all") query.tag = collegeType;
+    if (collegeId && collegeId !== "all") query.collegeId = collegeId;
+
+    const colleges = await College.find(query)
+      .populate({
+        path: "branches.branchDetails",
+        select: "branchId branchName -_id",
+      })
+      .lean();
+
+    if (!colleges.length) {
+      return res.status(404).json({ success: false, message: "No colleges found" });
+    }
+
+    let results = [];
+
+    colleges.forEach((college) => {
+      let filteredBranches = college.branches.filter((branch) => {
+        return branchId === "all" || branch.branchDetails?.branchId === branchId;
+      });
+
+      if (filteredBranches.length === 0) return;
+
+      let collegeData = {
+        collegeId: college.collegeId,
+        collegeName: college.collegeName,
+        branches: [],
+      };
+
+      filteredBranches.forEach((branch) => {
+        let branchData = {
+          branchId: branch.branchDetails?.branchId || null,
+          branchName: branch.branchDetails?.branchName || null,
+          categories: {},
+        };
+
+        let categoriesToCheck = category !== "all" ? [category] : ["gen", "obc", "ews", "sc", "st"];
+
+        categoriesToCheck.forEach((cat) => {
+          let homeStateData = branch.homeState?.[cat]?.filter((r) => r.year === year) || [];
+          let otherStateData = branch.otherState?.[cat]?.filter((r) => r.year === year) || [];
+
+          branchData.categories[cat] = {
+            homeState: {
+              totalSeats: homeStateData.reduce((sum, r) => sum + r.totalSeats, 0),
+              openingRank: homeStateData.length ? Math.min(...homeStateData.map((r) => r.openingRank)) : null,
+              closingRank: homeStateData.length ? Math.max(...homeStateData.map((r) => r.closingRank)) : null,
+            },
+            otherState: {
+              totalSeats: otherStateData.reduce((sum, r) => sum + r.totalSeats, 0),
+              openingRank: otherStateData.length ? Math.min(...otherStateData.map((r) => r.openingRank)) : null,
+              closingRank: otherStateData.length ? Math.max(...otherStateData.map((r) => r.closingRank)) : null,
+            },
+          };
+        });
+
+        collegeData.branches.push(branchData);
+      });
+
+      results.push(collegeData);
+    });
+
+    // Implement Pagination
+    const totalResults = results.length;
+    const totalPages = Math.ceil(totalResults / limit);
+    const paginatedResults = results.slice((page - 1) * limit, page * limit);
+
+    res.status(200).json({
+      success: true,
+      totalResults,
+      totalPages,
+      currentPage: page,
+      pageSize: limit,
+      data: paginatedResults,
+    });
+  } catch (error) {
+    console.error("Error fetching rankings:", error);
+    res.status(500).json({ success: false, message: "Internal Server Error", error: error.message });
+  }
+};
