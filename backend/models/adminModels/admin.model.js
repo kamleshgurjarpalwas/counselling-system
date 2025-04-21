@@ -9,7 +9,6 @@ const admin = new Schema({
   email: { type: String, required: true },
   password: { type: String, required: true, selected: false },
   updates: [{ type: mongoose.Schema.Types.ObjectId, ref: "Updates" }],
-  // joinDate: { type: Date },
 });
 
 admin.plugin(AutoIncrement, { inc_field: "adminId", start_seq: 1000 });

@@ -6,6 +6,8 @@ import InstituteTour from "@/pages/InstituteTour";
 import TimeTable from "@/pages/TimeTable";
 import ChoicesSelection from "@/components/dashBoardComponents/choiceSelection/ChoiceSelection";
 import RegistrationForm from "@/components/HomePageComponents/Registeration";
+import CollegeDropdowns from "../pages/OcOrPage"
+
 function AppRoutes() {
   return (
     <Routes>
@@ -16,6 +18,7 @@ function AppRoutes() {
       <Route path="/register" element={<RegistrationForm />} />
       <Route path="/choices" element={<ChoicesSelection />} />
       {/* Add more routes as needed */}
+      <Route path="/opening-closing-rank" element={<CollegeDropdowns />} />
     </Routes>
   );
 }
