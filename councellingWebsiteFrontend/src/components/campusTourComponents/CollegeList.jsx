@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 /**
  * @typedef {Object} College
@@ -14,6 +16,7 @@ import { Loader2 } from "lucide-react";
 const CollegeList = () => {
   const [colleges, setColleges] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:4000/api/colleges-info/collegelist")
@@ -43,7 +46,7 @@ const CollegeList = () => {
   return (
     <div className="max-w-4xl mx-auto py-10">
       <h1 className="text-3xl font-bold text-center mb-6">
-        🎓 Top Colleges in India
+        🎓 Participate institutes
       </h1>
 
       {loading ? (
@@ -73,6 +76,14 @@ const CollegeList = () => {
                 <span className="text-sm text-gray-600">
                   📍 {college.collegeState}
                 </span>
+              </CardContent>
+              <CardContent className="flex justify-end mt-2">
+                <Button
+                  className="bg-blue-600 text-white hover:bg-blue-700"
+                  onClick={() => navigate(`/college/${college.collegeId}`)}
+                >
+                  Visit More
+                </Button>
               </CardContent>
             </Card>
           ))}

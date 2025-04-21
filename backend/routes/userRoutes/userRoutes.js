@@ -2,8 +2,11 @@ const express = require("express");
 const routers = express.Router();
 const { body } = require("express-validator");
 const userController = require("../../controllers/userControllers/user.controller");
+const getChoicesController = require("../../controllers/userControllers/choicesSupply.controller");
 const userAuthanticater = require("../../middleware/authUser.middleware");
-
+const choiceUpdationController = require("../../controllers/userControllers/userChoiceSelection.controller");
+const allChoicesSupply = require("../../controllers/userControllers/allChoicesSupply.controller");
+const selectedChoicesController = require("../../controllers/userControllers/selectedChoices.controller");
 routers.post(
   "/register",
   [
@@ -34,6 +37,63 @@ routers.post(
 );
 
 routers.get("/profile", userAuthanticater.authUser, userController.userprofile);
-routers.get("/logout",userAuthanticater.authUser,userController.logout);
+routers.get("/logout", userAuthanticater.authUser, userController.logout);
+
+routers.get(
+  "/allchoices",
+  userAuthanticater.authUser,
+  allChoicesSupply.getAllChoices
+);
+
+routers.post(
+  "/pushSelectedChoices",
+  userAuthanticater.authUser,
+  selectedChoicesController.pushSelectedChoices
+);
+
+routers.get(
+  "/selectedchoice",
+  userAuthanticater.authUser,
+  selectedChoicesController.selectedChoices
+);
+
+routers.get(
+  "/getchoices",
+  userAuthanticater.authUser,
+  getChoicesController.choices
+);
+
+routers.get(
+  "/selectedChoices",
+  userAuthanticater.authUser,
+  getChoicesController.selectedChoices
+);
+
+routers.patch(
+  "/pushChoice",
+  userAuthanticater.authUser,
+  choiceUpdationController.pushChoice
+);
+routers.patch(
+  "/deleteSelected",
+  userAuthanticater.authUser,
+  choiceUpdationController.deleteSelected
+);
+routers.patch(
+  "/upChoice",
+  userAuthanticater.authUser,
+  choiceUpdationController.upChoice
+);
+routers.patch(
+  "/downChoice",
+  userAuthanticater.authUser,
+  choiceUpdationController.downChoice
+);
+
+routers.patch(
+  "/swapChoice",
+  userAuthanticater.authUser,
+  choiceUpdationController.swapChoice
+);
 
 module.exports = routers;

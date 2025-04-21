@@ -1,8 +1,14 @@
+//This is for push new choice to the user
 module.exports.pushChoice = async (req, res, next) => {
-  const user = req.user;
-  user.choosedChoices.push(req.body.choiceId);
-  user.save();
-  return res.status(200).json({ user, message: "successfully added choice" });
+  try {
+    const user = req.user;
+    user.choosedChoices.push(req.body.choiceId);
+    user.save();
+    return res.status(200).json({ message: "successfully added choice" });
+  } catch (error) {
+    console.error("Error pushing choice:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
 };
 
 //this is for deleting selected choice
@@ -23,17 +29,21 @@ module.exports.deleteSelected = async (req, res, next) => {
 
 //this is for do upward choice
 module.exports.upChoice = async (req, res, next) => {
+  console.log("you are in choiceUp");
   const choices = req.user.choosedChoices;
+  
   const index = choices.indexOf(req.body.choiceId);
   if (index > 0) {
+    console.log("you are in choiceUp and index is GR to 0",index);
     const temp = choices[index];
     choices[index] = choices[index - 1];
     choices[index - 1] = temp;
     req.user.choosedChoices = choices;
-    req.user.save();
+    await req.user.save();
+    console.log("successfully moved up", choices);
     return res
       .status(200)
-      .json({ user: req.user, message: "successfully moved up" });
+      .json({ message: "successfully moved up" });
   }
   if (index === 0) {
     return res.status(400).json({ message: "Choice is already at top" });
@@ -45,18 +55,18 @@ module.exports.upChoice = async (req, res, next) => {
 };
 
 //this is for do downward choice
-module.exports.upChoice = async (req, res, next) => {
+module.exports.downChoice = async (req, res, next) => {
   const choices = req.user.choosedChoices;
   const index = choices.indexOf(req.body.choiceId);
   if (index < choices.length - 1) {
     const temp = choices[index];
-    choices[index] = choices[index - 1];
-    choices[index - 1] = temp;
+    choices[index] = choices[index + 1];
+    choices[index + 1] = temp;
     req.user.choosedChoices = choices;
     req.user.save();
     return res
       .status(200)
-      .json({ user: req.user, message: "successfully moved down" });
+      .json({  message: "successfully moved down" });
   }
   if (index === choices.length - 1) {
     return res.status(400).json({ message: "Choice is already at bottom" });

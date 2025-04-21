@@ -1,0 +1,92 @@
+[
+  {
+    "choiceId": 1,
+    "type": "iit",
+    "seats": [
+      { "cat": "UR", "seats": 4 },
+      { "cat": "A", "seats": 4 },
+      { "cat": "B", "seats": 2 }
+    ]
+  },
+  {
+    "choiceId": 2,
+    "type": "non-iit",
+    "seats": [
+      { "cat": "UR", "seats": 5 },
+      { "cat": "A", "seats": 3 },
+      { "cat": "B", "seats": 2 }
+    ]
+  },
+  {
+    "choiceId": 3,
+    "type": "iit",
+    "seats": [
+      { "cat": "UR", "seats": 3 },
+      { "cat": "A", "seats": 4 },
+      { "cat": "B", "seats": 3 }
+    ]
+  },
+  {
+    "choiceId": 4,
+    "type": "non-iit",
+    "seats": [
+      { "cat": "UR", "seats": 6 },
+      { "cat": "A", "seats": 2 },
+      { "cat": "B", "seats": 2 }
+    ]
+  },
+  {
+    "choiceId": 5,
+    "type": "iit",
+    "seats": [
+      { "cat": "UR", "seats": 2 },
+      { "cat": "A", "seats": 5 },
+      { "cat": "B", "seats": 3 }
+    ]
+  },
+  {
+    "choiceId": 6,
+    "type": "non-iit",
+    "seats": [
+      { "cat": "UR", "seats": 3 },
+      { "cat": "A", "seats": 2 },
+      { "cat": "B", "seats": 5 }
+    ]
+  },
+  {
+    "choiceId": 7,
+    "type": "iit",
+    "seats": [
+      { "cat": "UR", "seats": 4 },
+      { "cat": "A", "seats": 1 },
+      { "cat": "B", "seats": 5 }
+    ]
+  },
+  {
+    "choiceId": 8,
+    "type": "non-iit",
+    "seats": [
+      { "cat": "UR", "seats": 5 },
+      { "cat": "A", "seats": 2 },
+      { "cat": "B", "seats": 3 }
+    ]
+  },
+  {
+    "choiceId": 9,
+    "type": "iit",
+    "seats": [
+      { "cat": "UR", "seats": 3 },
+      { "cat": "A", "seats": 3 },
+      { "cat": "B", "seats": 4 }
+    ]
+  },
+  {
+    "choiceId": 10,
+    "type": "non-iit",
+    "seats": [
+      { "cat": "UR", "seats": 2 },
+      { "cat": "A", "seats": 4 },
+      { "cat": "B", "seats": 4 }
+    ]
+  }
+]

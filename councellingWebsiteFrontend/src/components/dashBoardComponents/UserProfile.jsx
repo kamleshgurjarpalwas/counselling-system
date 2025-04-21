@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaCheckCircle, FaTimesCircle, FaSpinner } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const UserDashboard = () => {
   const [user, setUser] = useState(null);
@@ -60,9 +62,14 @@ const UserDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6 flex justify-center">
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-3xl">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center mb-6">
-          Candidate Profile
-        </h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 text-center flex-1">
+            Candidate Profile
+          </h2>
+          <Link to={`/choices`}>
+            <Button className="ml-auto">Choice Filling</Button>
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* User Information */}

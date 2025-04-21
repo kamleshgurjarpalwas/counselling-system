@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "1",
+    "cat": "A",
+    "allocatedChoice": 7,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 47,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "2",
+    "cat": "A",
+    "allocatedChoice": 8,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 89,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "5",
+    "cat": "A",
+    "allocatedChoice": 3,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 29,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "7",
+    "cat": "A",
+    "allocatedChoice": 4,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 14,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "9",
+    "cat": "A",
+    "allocatedChoice": 9,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 63,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "10",
+    "cat": "A",
+    "allocatedChoice": 3,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 18,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "14",
+    "cat": "A",
+    "allocatedChoice": 5,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 25,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "15",
+    "cat": "A",
+    "allocatedChoice": 6,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 29,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "16",
+    "cat": "A",
+    "allocatedChoice": 2,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 16,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "18",
+    "cat": "A",
+    "allocatedChoice": 5,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 39,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "19",
+    "cat": "A",
+    "allocatedChoice": 8,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 41,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "21",
+    "cat": "A",
+    "allocatedChoice": 10,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 83,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "22",
+    "cat": "A",
+    "allocatedChoice": 5,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 32,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "25",
+    "cat": "A",
+    "allocatedChoice": 5,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 44,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "26",
+    "cat": "A",
+    "allocatedChoice": 4,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 22,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "27",
+    "cat": "A",
+    "allocatedChoice": 9,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 61,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "30",
+    "cat": "A",
+    "allocatedChoice": 3,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 21,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "31",
+    "cat": "A",
+    "allocatedChoice": 4,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 31,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "33",
+    "cat": "A",
+    "allocatedChoice": 2,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 17,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "34",
+    "cat": "A",
+    "allocatedChoice": 10,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 144,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "35",
+    "cat": "A",
+    "allocatedChoice": 1,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 9,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "36",
+    "cat": "A",
+    "allocatedChoice": 6,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 27,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "37",
+    "cat": "A",
+    "allocatedChoice": 10,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 149,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "39",
+    "cat": "A",
+    "allocatedChoice": 5,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 42,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "40",
+    "cat": "A",
+    "allocatedChoice": 6,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 38,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "41",
+    "cat": "A",
+    "allocatedChoice": 2,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 21,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "42",
+    "cat": "A",
+    "allocatedChoice": 10,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 81,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "43",
+    "cat": "A",
+    "allocatedChoice": 5,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 28,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "46",
+    "cat": "A",
+    "allocatedChoice": 1,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 15,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "47",
+    "cat": "A",
+    "allocatedChoice": 4,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 26,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "48",
+    "cat": "A",
+    "allocatedChoice": 10,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 131,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "51",
+    "cat": "A",
+    "allocatedChoice": 3,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 23,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "54",
+    "cat": "A",
+    "allocatedChoice": 9,
+    "allocatedCategory": "A",
+    "rankUsed": "advRank",
+    "rankValue": 59,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "55",
+    "cat": "A",
+    "allocatedChoice": 10,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 148,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "56",
+    "cat": "A",
+    "allocatedChoice": 1,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 8,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "57",
+    "cat": "A",
+    "allocatedChoice": 8,
+    "allocatedCategory": "A",
+    "rankUsed": "mainRank",
+    "rankValue": 33,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "60",
+    "cat": "A",
+    "allocatedChoice": 1,
+    "allocatedCategory": "A",
+    "rankUsed": "catAdvRank",
+    "rankValue": 13,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "61",
+    "cat": "B",
+    "allocatedChoice": 3,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 11,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "62",
+    "cat": "B",
+    "allocatedChoice": 8,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 54,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "63",
+    "cat": "B",
+    "allocatedChoice": 10,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 22,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "64",
+    "cat": "B",
+    "allocatedChoice": 1,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 9,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "65",
+    "cat": "B",
+    "allocatedChoice": 4,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 19,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "66",
+    "cat": "B",
+    "allocatedChoice": 9,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 78,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "68",
+    "cat": "B",
+    "allocatedChoice": 5,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 27,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "69",
+    "cat": "B",
+    "allocatedChoice": 6,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 47,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "70",
+    "cat": "B",
+    "allocatedChoice": 8,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 19,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "71",
+    "cat": "B",
+    "allocatedChoice": 3,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 19,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "72",
+    "cat": "B",
+    "allocatedChoice": 6,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 39,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "73",
+    "cat": "B",
+    "allocatedChoice": 9,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 69,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "74",
+    "cat": "B",
+    "allocatedChoice": 7,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 128,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "75",
+    "cat": "B",
+    "allocatedChoice": 2,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 11,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "76",
+    "cat": "B",
+    "allocatedChoice": 4,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 24,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "77",
+    "cat": "B",
+    "allocatedChoice": 7,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 55,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "79",
+    "cat": "B",
+    "allocatedChoice": 9,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 20,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "80",
+    "cat": "B",
+    "allocatedChoice": 3,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 17,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "81",
+    "cat": "B",
+    "allocatedChoice": 6,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 43,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "82",
+    "cat": "B",
+    "allocatedChoice": 9,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 75,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "83",
+    "cat": "B",
+    "allocatedChoice": 7,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 130,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "84",
+    "cat": "B",
+    "allocatedChoice": 1,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 8,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "85",
+    "cat": "B",
+    "allocatedChoice": 4,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 21,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "86",
+    "cat": "B",
+    "allocatedChoice": 8,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 18,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "87",
+    "cat": "B",
+    "allocatedChoice": 10,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 24,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "88",
+    "cat": "B",
+    "allocatedChoice": 5,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 22,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "90",
+    "cat": "B",
+    "allocatedChoice": 10,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 21,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "91",
+    "cat": "B",
+    "allocatedChoice": 3,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 15,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "92",
+    "cat": "B",
+    "allocatedChoice": 6,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 37,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "93",
+    "cat": "B",
+    "allocatedChoice": 9,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 77,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "94",
+    "cat": "B",
+    "allocatedChoice": 8,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 82,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "95",
+    "cat": "B",
+    "allocatedChoice": 2,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 10,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "96",
+    "cat": "B",
+    "allocatedChoice": 6,
+    "allocatedCategory": "B",
+    "rankUsed": "mainRank",
+    "rankValue": 28,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "97",
+    "cat": "B",
+    "allocatedChoice": 7,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 49,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "98",
+    "cat": "B",
+    "allocatedChoice": 7,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 140,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "99",
+    "cat": "B",
+    "allocatedChoice": 10,
+    "allocatedCategory": "B",
+    "rankUsed": "catAdvRank",
+    "rankValue": 23,
+    "choiceType": "non-iit",
+    "preference": 10
+  },
+  {
+    "id": "100",
+    "cat": "B",
+    "allocatedChoice": 5,
+    "allocatedCategory": "B",
+    "rankUsed": "advRank",
+    "rankValue": 13,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "116",
+    "cat": "UR",
+    "allocatedChoice": 4,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 18,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "117",
+    "cat": "UR",
+    "allocatedChoice": 7,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 50,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "120",
+    "cat": "UR",
+    "allocatedChoice": 3,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 12,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "135",
+    "cat": "UR",
+    "allocatedChoice": 4,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 16,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "136",
+    "cat": "UR",
+    "allocatedChoice": 7,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 54,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "139",
+    "cat": "UR",
+    "allocatedChoice": 1,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 3,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "145",
+    "cat": "UR",
+    "allocatedChoice": 8,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 90,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "146",
+    "cat": "UR",
+    "allocatedChoice": 3,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 10,
+    "choiceType": "iit",
+    "preference": 3
+  },
+  {
+    "id": "147",
+    "cat": "UR",
+    "allocatedChoice": 6,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 34,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "155",
+    "cat": "UR",
+    "allocatedChoice": 2,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 1,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "157",
+    "cat": "UR",
+    "allocatedChoice": 8,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 91,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "159",
+    "cat": "UR",
+    "allocatedChoice": 1,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 1,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "160",
+    "cat": "UR",
+    "allocatedChoice": 6,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 32,
+    "choiceType": "non-iit",
+    "preference": 6
+  },
+  {
+    "id": "165",
+    "cat": "UR",
+    "allocatedChoice": 1,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 4,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "166",
+    "cat": "UR",
+    "allocatedChoice": 2,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 12,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "170",
+    "cat": "UR",
+    "allocatedChoice": 2,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 10,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "175",
+    "cat": "UR",
+    "allocatedChoice": 1,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 2,
+    "choiceType": "iit",
+    "preference": 1
+  },
+  {
+    "id": "178",
+    "cat": "UR",
+    "allocatedChoice": 7,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 52,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "181",
+    "cat": "UR",
+    "allocatedChoice": 4,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 20,
+    "choiceType": "non-iit",
+    "preference": 4
+  },
+  {
+    "id": "187",
+    "cat": "UR",
+    "allocatedChoice": 7,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 56,
+    "choiceType": "iit",
+    "preference": 7
+  },
+  {
+    "id": "188",
+    "cat": "UR",
+    "allocatedChoice": 8,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 87,
+    "choiceType": "non-iit",
+    "preference": 8
+  },
+  {
+    "id": "190",
+    "cat": "UR",
+    "allocatedChoice": 5,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 43,
+    "choiceType": "iit",
+    "preference": 5
+  },
+  {
+    "id": "193",
+    "cat": "UR",
+    "allocatedChoice": 9,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 70,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "196",
+    "cat": "UR",
+    "allocatedChoice": 9,
+    "allocatedCategory": "UR",
+    "rankUsed": "advRank",
+    "rankValue": 66,
+    "choiceType": "iit",
+    "preference": 9
+  },
+  {
+    "id": "197",
+    "cat": "UR",
+    "allocatedChoice": 2,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 9,
+    "choiceType": "non-iit",
+    "preference": 2
+  },
+  {
+    "id": "199",
+    "cat": "UR",
+    "allocatedChoice": 2,
+    "allocatedCategory": "UR",
+    "rankUsed": "mainRank",
+    "rankValue": 7,
+    "choiceType": "non-iit",
+    "preference": 2
+  }
+]

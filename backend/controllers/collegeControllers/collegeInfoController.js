@@ -2,7 +2,16 @@ const College = require("../../models/collegeModels/collegeInfo.model");
 
 exports.getAllColleges = async (req, res) => {
   try {
-    let { page = 1, limit = 10, sortBy = "collegeName", order = "asc", search, state, tag, year } = req.query;
+    let {
+      page = 1,
+      limit = 10,
+      sortBy = "collegeName",
+      order = "asc",
+      search,
+      state,
+      tag,
+      year,
+    } = req.query;
 
     page = parseInt(page);
     limit = parseInt(limit);
@@ -34,10 +43,12 @@ exports.getAllColleges = async (req, res) => {
     ]);
 
     if (!colleges.length) {
-      return res.status(404).json({ success: false, message: "No colleges found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "No colleges found" });
     }
 
-    const formattedColleges = colleges.map(college => ({
+    const formattedColleges = colleges.map((college) => ({
       _id: college._id,
       tag: college.tag,
       collegeId: college.collegeId,
@@ -45,7 +56,7 @@ exports.getAllColleges = async (req, res) => {
       address: college.address,
       totalBranches: college.branches.length,
       restrictions: college.restrictions,
-      branches: college.branches.map(branch => ({
+      branches: college.branches.map((branch) => ({
         _id: branch._id,
         branchId: branch.branchDetails?.branchId || null,
         branchName: branch.branchDetails?.branchName || null,
@@ -66,13 +77,17 @@ exports.getAllColleges = async (req, res) => {
       colleges: formattedColleges,
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: "Internal Server Error", error: error.message });
+    res
+      .status(500)
+      .json({
+        success: false,
+        message: "Internal Server Error",
+        error: error.message,
+      });
   }
 };
 
-
 exports.getCollegeList = async (req, res) => {
-  
   try {
     let { tag, state, page, limit, search } = req.query;
 
@@ -87,14 +102,17 @@ exports.getCollegeList = async (req, res) => {
     if (search) {
       filter.$or = [
         { collegeId: { $regex: search, $options: "i" } },
-        { collegeName: { $regex: search, $options: "i" } }
+        { collegeName: { $regex: search, $options: "i" } },
       ];
     }
 
     const totalColleges = await College.countDocuments(filter);
     const totalPages = Math.ceil(totalColleges / limit);
 
-    const colleges = await College.find(filter, "tag collegeId collegeName address.state")
+    const colleges = await College.find(
+      filter,
+      "tag collegeId collegeName address.state"
+    )
       .skip(skip)
       .limit(limit);
 
@@ -102,7 +120,7 @@ exports.getCollegeList = async (req, res) => {
       return res.status(404).json({ message: "Colleges not found" });
     }
 
-    const formattedColleges = colleges.map(college => ({
+    const formattedColleges = colleges.map((college) => ({
       tag: college.tag,
       collegeId: college.collegeId,
       collegeName: college.collegeName,
@@ -132,11 +150,10 @@ exports.getCollegeById = async (req, res) => {
     const currentYear = new Date().getFullYear();
     year = year ? parseInt(year) : currentYear;
 
-    const college = await College.findOne({ collegeId })
-      .populate({
-        path: "branches.branchDetails",
-        select: "branchId branchName duration description restrictions",
-      });
+    const college = await College.findOne({ collegeId }).populate({
+      path: "branches.branchDetails",
+      select: "branchId branchName duration description restrictions",
+    });
 
     if (!college) {
       return res.status(404).json({ message: "College not found" });
@@ -149,7 +166,7 @@ exports.getCollegeById = async (req, res) => {
       address: college.address,
       totalBranches: college.branches.length,
       restrictions: college.restrictions,
-      branches: college.branches.map(branch => ({
+      branches: college.branches.map((branch) => ({
         branchId: branch.branchDetails?.branchId || null,
         branchName: branch.branchDetails?.branchName || null,
         duration: branch.branchDetails?.duration || null,
@@ -177,19 +194,22 @@ exports.getCollegeBranchById = async (req, res) => {
     const currentYear = new Date().getFullYear();
     year = year ? parseInt(year) : currentYear;
 
-    const college = await College.findOne({ collegeId })
-      .populate({
-        path: "branches.branchDetails",
-        select: "branchId branchName duration description restrictions",
-      });
+    const college = await College.findOne({ collegeId }).populate({
+      path: "branches.branchDetails",
+      select: "branchId branchName duration description restrictions",
+    });
 
     if (!college) {
       return res.status(404).json({ message: "College not found" });
     }
 
-    const branch = college.branches.find(branch => branch.branchDetails?.branchId === branchId);
+    const branch = college.branches.find(
+      (branch) => branch.branchDetails?.branchId === branchId
+    );
     if (!branch) {
-      return res.status(404).json({ message: "Branch not found in this college" });
+      return res
+        .status(404)
+        .json({ message: "Branch not found in this college" });
     }
 
     const formattedBranch = {
@@ -211,20 +231,23 @@ exports.getCollegeBranchById = async (req, res) => {
   }
 };
 
-
 exports.getAllChoices = async (req, res) => {
   try {
-    let { page = 1, limit = 10, search, tag, collegeName, branchName } = req.query;
-    page = parseInt(page);
-    limit = parseInt(limit);
+    let { page, limit, search, tag, collegeName, branchName, isAdvancedQualify } = req.query;
+    page = parseInt(page) || 1;
+    limit = parseInt(limit) || 10;
     const skip = (page - 1) * limit;
     const currentYear = new Date().getFullYear();
 
     let filter = {};
-    
-    if (tag) filter["tag"] = new RegExp(tag, "i");
+
+    // Filter for 'tag' if provided
+    if (tag) filter["tag"] = tag;
+
+    // Filter for 'collegeName' if provided
     if (collegeName) filter["collegeName"] = new RegExp(collegeName, "i");
 
+    // Filter for search query (collegeId or collegeName)
     if (search) {
       filter.$or = [
         { collegeId: new RegExp(search, "i") },
@@ -232,22 +255,28 @@ exports.getAllChoices = async (req, res) => {
       ];
     }
 
-    const totalChoices = await College.countDocuments(filter);
+    // Handle the 'isAdvancedQualify' flag
+    if (isAdvancedQualify === 'true') {
+      // Get all tags of the college if 'isAdvancedQualify' is true
+    } else if (isAdvancedQualify === 'false') {
+      // Exclude colleges with the tag 'iit' if 'isAdvancedQualify' is false
+      filter["tag"] = { $ne: "iit" };
+    }
 
+    // Fetch colleges with the specified filter
     const colleges = await College.find(filter)
       .populate({
         path: "branches.branchDetails",
         select: "branchId branchName duration description restrictions",
       })
-      .skip(skip)
-      .limit(limit)
       .lean();
 
     if (!colleges.length) {
       return res.status(404).json({ success: false, message: "No choices found" });
     }
 
-    let choices = colleges.flatMap((college) =>
+    // Flatten colleges and branches into a single list of choices
+    let allChoices = colleges.flatMap((college) =>
       college.branches.map((branch) => ({
         choiceId: branch._id,
         collegeId: college.collegeId,
@@ -258,15 +287,24 @@ exports.getAllChoices = async (req, res) => {
         duration: branch.branchDetails?.duration || null,
         description: branch.branchDetails?.description || null,
         restrictions: branch.branchDetails?.restrictions || {},
-        otherState: filterByYear(branch.otherState, currentYear),
-        homeState: filterByYear(branch.homeState, currentYear),
+        // otherState: filterByYear(branch.otherState, currentYear),
+        // homeState: filterByYear(branch.homeState, currentYear),
       }))
     );
 
+    // Filter choices based on branchName if provided
     if (branchName) {
       const branchQuery = branchName.toLowerCase();
-      choices = choices.filter((choice) => choice.branchName?.toLowerCase().includes(branchQuery));
+      allChoices = allChoices.filter((choice) =>
+        choice.branchName?.toLowerCase().includes(branchQuery)
+      );
     }
+
+    // Total number of choices
+    const totalChoices = allChoices.length;
+
+    // Paginate the choices list
+    const paginatedChoices = allChoices.slice(skip, skip + limit);
 
     res.status(200).json({
       success: true,
@@ -274,7 +312,7 @@ exports.getAllChoices = async (req, res) => {
       totalPages: Math.ceil(totalChoices / limit),
       currentPage: page,
       pageSize: limit,
-      data: choices,
+      data: paginatedChoices,
     });
   } catch (error) {
     res.status(500).json({ success: false, message: "Server Error", error: error.message });
@@ -282,12 +320,12 @@ exports.getAllChoices = async (req, res) => {
 };
 
 
+
 const filterByYear = (stateData, year) => {
   let filteredState = {};
-  Object.keys(stateData).forEach(category => {
-    const filtered = stateData[category].filter(rank => rank.year === year);
+  Object.keys(stateData).forEach((category) => {
+    const filtered = stateData[category].filter((rank) => rank.year === year);
     filteredState[category] = filtered.length > 0 ? filtered : null;
   });
   return filteredState;
 };
-

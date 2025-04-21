@@ -30,10 +30,10 @@ module.exports.registeruser = async (req, res, next) => {
 
     try {
       const hashedPassword = await userModel.hashPassword(password);
-      console.log("This is hased password",hashedPassword);
+      console.log("This is hased password", hashedPassword);
       await userService.register(isUserExist, hashedPassword);
       const token = isUserExist.generateAuthToken();
-    
+
       return res.status(201).json({ token, isUserExist });
     } catch (err) {
       return res.status(500).json({ message: "Internal Server Error" });
@@ -47,7 +47,6 @@ module.exports.loginuser = async (req, res, next) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-
 
   const { email, password } = req.body;
 
@@ -68,14 +67,14 @@ module.exports.loginuser = async (req, res, next) => {
   const token = user.generateAuthToken();
   res.cookie("token", token);
 
-
+  console.log("Sended user", user);
   return res.status(200).json({ user });
 };
 
 module.exports.userprofile = (req, res, next) => {
   console.log("You are in user profile controller......");
   const user = req.user;
-  return res.status(200).json({user});
+  return res.status(200).json({ user });
 };
 
 module.exports.logout = async (req, res, next) => {
@@ -86,4 +85,3 @@ module.exports.logout = async (req, res, next) => {
   res.clearCookie("token");
   res.status(200).json({ message: "Log out" });
 };
-

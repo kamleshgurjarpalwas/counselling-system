@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "1",
+    "cat": "A",
+    "advRank": 47,
+    "mainRank": 132,
+    "catAdvRank": 14,
+    "catMainRank": 41,
+    "choices": [8, 6, 7, 9, 3, 4, 5, 1, 2, 10]
+  },
+  {
+    "id": "2",
+    "cat": "A",
+    "advRank": 183,
+    "mainRank": 89,
+    "catAdvRank": 55,
+    "catMainRank": 31,
+    "choices": [9, 7, 2, 5, 8, 6, 3, 10, 4, 1]
+  },
+  {
+    "id": "3",
+    "cat": "A",
+    "advRank": 112,
+    "mainRank": 56,
+    "catAdvRank": 33,
+    "catMainRank": 16,
+    "choices": [10, 3, 2, 4, 7, 5, 6, 1, 9, 8]
+  },
+  {
+    "id": "4",
+    "cat": "A",
+    "advRank": 76,
+    "mainRank": 167,
+    "catAdvRank": 25,
+    "catMainRank": 55,
+    "choices": [9, 5, 3, 4, 10, 8, 6, 2, 7, 1]
+  },
+  {
+    "id": "5",
+    "cat": "A",
+    "advRank": 29,
+    "mainRank": 43,
+    "catAdvRank": 6,
+    "catMainRank": 12,
+    "choices": [3, 10, 5, 6, 8, 7, 4, 9, 2, 1]
+  },
+  {
+    "id": "6",
+    "cat": "A",
+    "advRank": 155,
+    "mainRank": 198,
+    "catAdvRank": 48,
+    "catMainRank": 60,
+    "choices": [1, 4, 5, 8, 9, 10, 7, 3, 6, 2]
+  },
+  {
+    "id": "7",
+    "cat": "A",
+    "advRank": 91,
+    "mainRank": 14,
+    "catAdvRank": 30,
+    "catMainRank": 1,
+    "choices": [10, 8, 4, 7, 6, 5, 9, 3, 1, 2]
+  },
+  {
+    "id": "8",
+    "cat": "A",
+    "advRank": 134,
+    "mainRank": 77,
+    "catAdvRank": 41,
+    "catMainRank": 26,
+    "choices": [2, 4, 9, 7, 5, 8, 6, 3, 1, 10]
+  },
+  {
+    "id": "9",
+    "cat": "A",
+    "advRank": 63,
+    "mainRank": 121,
+    "catAdvRank": 20,
+    "catMainRank": 36,
+    "choices": [10, 8, 3, 2, 9, 4, 5, 7, 1, 6]
+  },
+  {
+    "id": "10",
+    "cat": "A",
+    "advRank": 18,
+    "mainRank": 95,
+    "catAdvRank": 1,
+    "catMainRank": 32,
+    "choices": [10, 4, 7, 9, 2, 1, 3, 5, 6, 8]
+  },
+  {
+    "id": "11",
+    "cat": "A",
+    "advRank": 142,
+    "mainRank": 36,
+    "catAdvRank": 44,
+    "catMainRank": 9,
+    "choices": [9, 3, 8, 1, 10, 4, 7, 5, 6, 2]
+  },
+  {
+    "id": "12",
+    "cat": "A",
+    "advRank": 197,
+    "mainRank": 152,
+    "catAdvRank": 60,
+    "catMainRank": 48,
+    "choices": [10, 4, 7, 2, 5, 3, 1, 9, 6, 8]
+  },
+  {
+    "id": "13",
+    "cat": "A",
+    "advRank": 84,
+    "mainRank": 63,
+    "catAdvRank": 28,
+    "catMainRank": 19,
+    "choices": [7, 10, 5, 2, 8, 9, 4, 1, 6, 3]
+  },
+  {
+    "id": "14",
+    "cat": "A",
+    "advRank": 25,
+    "mainRank": 184,
+    "catAdvRank": 4,
+    "catMainRank": 59,
+    "choices": [4, 7, 8, 5, 10, 1, 3, 6, 9, 2]
+  },
+  {
+    "id": "15",
+    "cat": "A",
+    "advRank": 167,
+    "mainRank": 29,
+    "catAdvRank": 51,
+    "catMainRank": 5,
+    "choices": [4, 7, 8, 9, 10, 1, 3, 2, 6, 5]
+  },
+  {
+    "id": "16",
+    "cat": "A",
+    "advRank": 53,
+    "mainRank": 147,
+    "catAdvRank": 16,
+    "catMainRank": 45,
+    "choices": [7, 6, 5, 4, 2, 9, 10, 3, 8, 1]
+  },
+  {
+    "id": "17",
+    "cat": "A",
+    "advRank": 116,
+    "mainRank": 72,
+    "catAdvRank": 35,
+    "catMainRank": 23,
+    "choices": [8, 6, 3, 1, 7, 4, 9, 10, 2, 5]
+  },
+  {
+    "id": "18",
+    "cat": "A",
+    "advRank": 39,
+    "mainRank": 115,
+    "catAdvRank": 10,
+    "catMainRank": 35,
+    "choices": [6, 3, 9, 10, 4, 5, 1, 2, 7, 8]
+  },
+  {
+    "id": "19",
+    "cat": "A",
+    "advRank": 188,
+    "mainRank": 41,
+    "catAdvRank": 56,
+    "catMainRank": 11,
+    "choices": [4, 1, 9, 3, 2, 5, 7, 10, 6, 8]
+  },
+  {
+    "id": "20",
+    "cat": "A",
+    "advRank": 71,
+    "mainRank": 158,
+    "catAdvRank": 23,
+    "catMainRank": 51,
+    "choices": [3, 10, 2, 9, 6, 1, 8, 7, 4, 5]
+  },
+  {
+    "id": "21",
+    "cat": "A",
+    "advRank": 124,
+    "mainRank": 83,
+    "catAdvRank": 38,
+    "catMainRank": 29,
+    "choices": [5, 4, 1, 3, 10, 8, 6, 7, 9, 2]
+  },
+  {
+    "id": "22",
+    "cat": "A",
+    "advRank": 32,
+    "mainRank": 176,
+    "catAdvRank": 7,
+    "catMainRank": 58,
+    "choices": [5, 2, 10, 9, 1, 3, 4, 8, 6, 7]
+  },
+  {
+    "id": "23",
+    "cat": "A",
+    "advRank": 159,
+    "mainRank": 52,
+    "catAdvRank": 49,
+    "catMainRank": 15,
+    "choices": [8, 5, 2, 9, 3, 1, 6, 7, 4, 10]
+  },
+  {
+    "id": "24",
+    "cat": "A",
+    "advRank": 97,
+    "mainRank": 139,
+    "catAdvRank": 32,
+    "catMainRank": 43,
+    "choices": [8, 1, 10, 2, 6, 3, 5, 4, 7, 9]
+  },
+  {
+    "id": "25",
+    "cat": "A",
+    "advRank": 44,
+    "mainRank": 67,
+    "catAdvRank": 12,
+    "catMainRank": 21,
+    "choices": [5, 9, 2, 10, 7, 8, 3, 1, 4, 6]
+  },
+  {
+    "id": "26",
+    "cat": "A",
+    "advRank": 178,
+    "mainRank": 22,
+    "catAdvRank": 54,
+    "catMainRank": 2,
+    "choices": [6, 8, 4, 7, 10, 5, 9, 1, 2, 3]
+  },
+  {
+    "id": "27",
+    "cat": "A",
+    "advRank": 61,
+    "mainRank": 128,
+    "catAdvRank": 19,
+    "catMainRank": 39,
+    "choices": [9, 10, 2, 1, 4, 7, 5, 6, 3, 8]
+  },
+  {
+    "id": "28",
+    "cat": "A",
+    "advRank": 135,
+    "mainRank": 45,
+    "catAdvRank": 42,
+    "catMainRank": 13,
+    "choices": [4, 1, 7, 6, 8, 5, 3, 10, 2, 9]
+  },
+  {
+    "id": "29",
+    "cat": "A",
+    "advRank": 82,
+    "mainRank": 171,
+    "catAdvRank": 27,
+    "catMainRank": 56,
+    "choices": [5, 10, 2, 3, 9, 8, 1, 7, 6, 4]
+  },
+  {
+    "id": "30",
+    "cat": "A",
+    "advRank": 21,
+    "mainRank": 98,
+    "catAdvRank": 2,
+    "catMainRank": 33,
+    "choices": [9, 7, 8, 5, 10, 2, 3, 6, 1, 4]
+  },
+  {
+    "id": "31",
+    "cat": "A",
+    "advRank": 148,
+    "mainRank": 31,
+    "catAdvRank": 46,
+    "catMainRank": 6,
+    "choices": [2, 5, 10, 7, 3, 6, 4, 8, 1, 9]
+  },
+  {
+    "id": "32",
+    "cat": "A",
+    "advRank": 193,
+    "mainRank": 156,
+    "catAdvRank": 59,
+    "catMainRank": 50,
+    "choices": [2, 10, 1, 6, 9, 3, 7, 8, 5, 4]
+  },
+  {
+    "id": "33",
+    "cat": "A",
+    "advRank": 57,
+    "mainRank": 79,
+    "catAdvRank": 17,
+    "catMainRank": 27,
+    "choices": [3, 2, 4, 7, 5, 6, 1, 10, 9, 8]
+  },
+  {
+    "id": "34",
+    "cat": "A",
+    "advRank": 126,
+    "mainRank": 144,
+    "catAdvRank": 39,
+    "catMainRank": 44,
+    "choices": [1, 2, 5, 7, 4, 3, 9, 8, 6, 10]
+  },
+  {
+    "id": "35",
+    "cat": "A",
+    "advRank": 37,
+    "mainRank": 62,
+    "catAdvRank": 9,
+    "catMainRank": 18,
+    "choices": [8, 6, 4, 2, 9, 10, 7, 3, 1, 5]
+  },
+  {
+    "id": "36",
+    "cat": "A",
+    "advRank": 164,
+    "mainRank": 27,
+    "catAdvRank": 50,
+    "catMainRank": 4,
+    "choices": [7, 6, 3, 10, 9, 2, 8, 1, 4, 5]
+  },
+  {
+    "id": "37",
+    "cat": "A",
+    "advRank": 73,
+    "mainRank": 149,
+    "catAdvRank": 24,
+    "catMainRank": 47,
+    "choices": [4, 3, 5, 6, 7, 1, 2, 9, 8, 10]
+  },
+  {
+    "id": "38",
+    "cat": "A",
+    "advRank": 118,
+    "mainRank": 68,
+    "catAdvRank": 36,
+    "catMainRank": 22,
+    "choices": [6, 7, 9, 2, 4, 10, 5, 1, 8, 3]
+  },
+  {
+    "id": "39",
+    "cat": "A",
+    "advRank": 42,
+    "mainRank": 123,
+    "catAdvRank": 11,
+    "catMainRank": 37,
+    "choices": [8, 7, 4, 3, 5, 10, 1, 2, 9, 6]
+  },
+  {
+    "id": "40",
+    "cat": "A",
+    "advRank": 189,
+    "mainRank": 38,
+    "catAdvRank": 57,
+    "catMainRank": 10,
+    "choices": [7, 9, 4, 5, 2, 3, 10, 1, 8, 6]
+  },
+  {
+    "id": "41",
+    "cat": "A",
+    "advRank": 65,
+    "mainRank": 162,
+    "catAdvRank": 21,
+    "catMainRank": 53,
+    "choices": [1, 2, 9, 10, 4, 6, 3, 7, 5, 8]
+  },
+  {
+    "id": "42",
+    "cat": "A",
+    "advRank": 132,
+    "mainRank": 81,
+    "catAdvRank": 40,
+    "catMainRank": 28,
+    "choices": [7, 6, 4, 2, 9, 10, 1, 8, 3, 5]
+  },
+  {
+    "id": "43",
+    "cat": "A",
+    "advRank": 28,
+    "mainRank": 174,
+    "catAdvRank": 5,
+    "catMainRank": 57,
+    "choices": [2, 7, 5, 10, 3, 4, 6, 9, 8, 1]
+  },
+  {
+    "id": "44",
+    "cat": "A",
+    "advRank": 153,
+    "mainRank": 48,
+    "catAdvRank": 47,
+    "catMainRank": 14,
+    "choices": [4, 6, 7, 9, 1, 5, 2, 10, 3, 8]
+  },
+  {
+    "id": "45",
+    "cat": "A",
+    "advRank": 94,
+    "mainRank": 135,
+    "catAdvRank": 31,
+    "catMainRank": 42,
+    "choices": [9, 6, 3, 2, 10, 7, 4, 5, 1, 8]
+  },
+  {
+    "id": "46",
+    "cat": "A",
+    "advRank": 51,
+    "mainRank": 73,
+    "catAdvRank": 15,
+    "catMainRank": 24,
+    "choices": [8, 2, 3, 7, 4, 5, 10, 6, 9, 1]
+  },
+  {
+    "id": "47",
+    "cat": "A",
+    "advRank": 176,
+    "mainRank": 26,
+    "catAdvRank": 53,
+    "catMainRank": 3,
+    "choices": [8, 2, 7, 6, 1, 10, 5, 4, 9, 3]
+  },
+  {
+    "id": "48",
+    "cat": "A",
+    "advRank": 67,
+    "mainRank": 131,
+    "catAdvRank": 22,
+    "catMainRank": 40,
+    "choices": [6, 10, 4, 8, 9, 7, 1, 3, 5, 2]
+  },
+  {
+    "id": "49",
+    "cat": "A",
+    "advRank": 138,
+    "mainRank": 59,
+    "catAdvRank": 43,
+    "catMainRank": 17,
+    "choices": [7, 5, 9, 8, 2, 6, 3, 10, 1, 4]
+  },
+  {
+    "id": "50",
+    "cat": "A",
+    "advRank": 87,
+    "mainRank": 165,
+    "catAdvRank": 29,
+    "catMainRank": 54,
+    "choices": [3, 4, 2, 1, 7, 8, 5, 9, 10, 6]
+  },
+  {
+    "id": "51",
+    "cat": "A",
+    "advRank": 23,
+    "mainRank": 102,
+    "catAdvRank": 3,
+    "catMainRank": 34,
+    "choices": [4, 5, 3, 1, 2, 10, 8, 6, 7, 9]
+  },
+  {
+    "id": "52",
+    "cat": "A",
+    "advRank": 144,
+    "mainRank": 35,
+    "catAdvRank": 45,
+    "catMainRank": 8,
+    "choices": [3, 4, 1, 10, 2, 7, 5, 8, 9, 6]
+  },
+  {
+    "id": "53",
+    "cat": "A",
+    "advRank": 191,
+    "mainRank": 160,
+    "catAdvRank": 58,
+    "catMainRank": 52,
+    "choices": [5, 4, 3, 2, 8, 6, 10, 7, 1, 9]
+  },
+  {
+    "id": "54",
+    "cat": "A",
+    "advRank": 59,
+    "mainRank": 85,
+    "catAdvRank": 18,
+    "catMainRank": 30,
+    "choices": [3, 10, 8, 7, 5, 1, 9, 6, 2, 4]
+  },
+  {
+    "id": "55",
+    "cat": "A",
+    "advRank": 122,
+    "mainRank": 148,
+    "catAdvRank": 37,
+    "catMainRank": 46,
+    "choices": [5, 3, 9, 6, 8, 7, 10, 2, 1, 4]
+  },
+  {
+    "id": "56",
+    "cat": "A",
+    "advRank": 35,
+    "mainRank": 66,
+    "catAdvRank": 8,
+    "catMainRank": 20,
+    "choices": [4, 5, 1, 3, 10, 8, 2, 7, 6, 9]
+  },
+  {
+    "id": "57",
+    "cat": "A",
+    "advRank": 168,
+    "mainRank": 33,
+    "catAdvRank": 52,
+    "catMainRank": 7,
+    "choices": [6, 5, 1, 9, 8, 4, 2, 10, 3, 7]
+  },
+  {
+    "id": "58",
+    "cat": "A",
+    "advRank": 79,
+    "mainRank": 153,
+    "catAdvRank": 26,
+    "catMainRank": 49,
+    "choices": [1, 3, 4, 5, 2, 7, 8, 9, 10, 6]
+  },
+  {
+    "id": "59",
+    "cat": "A",
+    "advRank": 114,
+    "mainRank": 74,
+    "catAdvRank": 34,
+    "catMainRank": 25,
+    "choices": [10, 2, 3, 4, 9, 6, 1, 7, 5, 8]
+  },
+  {
+    "id": "60",
+    "cat": "A",
+    "advRank": 46,
+    "mainRank": 127,
+    "catAdvRank": 13,
+    "catMainRank": 38,
+    "choices": [9, 5, 3, 8, 7, 4, 1, 2, 10, 6]
+  },
+  {
+    "id": "61",
+    "cat": "B",
+    "advRank": 11,
+    "mainRank": 119,
+    "catAdvRank": 1,
+    "catMainRank": 23,
+    "choices": [3, 6, 4, 8, 1, 2, 9, 7, 10, 5]
+  },
+  {
+    "id": "62",
+    "cat": "B",
+    "advRank": 172,
+    "mainRank": 54,
+    "catAdvRank": 38,
+    "catMainRank": 10,
+    "choices": [6, 2, 8, 10, 7, 5, 1, 3, 4, 9]
+  },
+  {
+    "id": "63",
+    "cat": "B",
+    "advRank": 93,
+    "mainRank": 169,
+    "catAdvRank": 22,
+    "catMainRank": 37,
+    "choices": [3, 2, 7, 10, 8, 6, 5, 1, 9, 4]
+  },
+  {
+    "id": "64",
+    "cat": "B",
+    "advRank": 34,
+    "mainRank": 70,
+    "catAdvRank": 9,
+    "catMainRank": 14,
+    "choices": [10, 3, 2, 8, 1, 5, 4, 6, 7, 9]
+  },
+  {
+    "id": "65",
+    "cat": "B",
+    "advRank": 157,
+    "mainRank": 19,
+    "catAdvRank": 34,
+    "catMainRank": 1,
+    "choices": [6, 3, 2, 1, 5, 8, 4, 9, 7, 10]
+  },
+  {
+    "id": "66",
+    "cat": "B",
+    "advRank": 78,
+    "mainRank": 141,
+    "catAdvRank": 17,
+    "catMainRank": 27,
+    "choices": [8, 7, 2, 10, 5, 1, 6, 3, 4, 9]
+  },
+  {
+    "id": "67",
+    "cat": "B",
+    "advRank": 121,
+    "mainRank": 64,
+    "catAdvRank": 25,
+    "catMainRank": 12,
+    "choices": [10, 5, 2, 7, 3, 9, 4, 1, 8, 6]
+  },
+  {
+    "id": "68",
+    "cat": "B",
+    "advRank": 27,
+    "mainRank": 178,
+    "catAdvRank": 7,
+    "catMainRank": 39,
+    "choices": [8, 1, 7, 6, 4, 5, 9, 3, 10, 2]
+  },
+  {
+    "id": "69",
+    "cat": "B",
+    "advRank": 146,
+    "mainRank": 47,
+    "catAdvRank": 31,
+    "catMainRank": 8,
+    "choices": [9, 1, 7, 8, 5, 3, 10, 2, 4, 6]
+  },
+  {
+    "id": "70",
+    "cat": "B",
+    "advRank": 85,
+    "mainRank": 157,
+    "catAdvRank": 19,
+    "catMainRank": 32,
+    "choices": [9, 2, 8, 10, 5, 6, 1, 3, 4, 7]
+  },
+  {
+    "id": "71",
+    "cat": "B",
+    "advRank": 19,
+    "mainRank": 106,
+    "catAdvRank": 5,
+    "catMainRank": 19,
+    "choices": [1, 10, 5, 6, 7, 2, 4, 9, 8, 3]
+  },
+  {
+    "id": "72",
+    "cat": "B",
+    "advRank": 162,
+    "mainRank": 39,
+    "catAdvRank": 36,
+    "catMainRank": 6,
+    "choices": [1, 8, 6, 7, 2, 5, 10, 3, 9, 4]
+  },
+  {
+    "id": "73",
+    "cat": "B",
+    "advRank": 69,
+    "mainRank": 151,
+    "catAdvRank": 14,
+    "catMainRank": 29,
+    "choices": [4, 6, 5, 7, 1, 3, 2, 9, 8, 10]
+  },
+  {
+    "id": "74",
+    "cat": "B",
+    "advRank": 128,
+    "mainRank": 78,
+    "catAdvRank": 26,
+    "catMainRank": 16,
+    "choices": [6, 9, 2, 7, 3, 4, 8, 10, 1, 5]
+  },
+  {
+    "id": "75",
+    "cat": "B",
+    "advRank": 41,
+    "mainRank": 125,
+    "catAdvRank": 11,
+    "catMainRank": 24,
+    "choices": [6, 3, 1, 2, 5, 10, 4, 9, 7, 8]
+  },
+  {
+    "id": "76",
+    "cat": "B",
+    "advRank": 194,
+    "mainRank": 24,
+    "catAdvRank": 40,
+    "catMainRank": 3,
+    "choices": [8, 4, 3, 7, 6, 2, 1, 10, 9, 5]
+  },
+  {
+    "id": "77",
+    "cat": "B",
+    "advRank": 55,
+    "mainRank": 166,
+    "catAdvRank": 13,
+    "catMainRank": 36,
+    "choices": [4, 10, 9, 1, 6, 8, 5, 2, 3, 7]
+  },
+  {
+    "id": "78",
+    "cat": "B",
+    "advRank": 136,
+    "mainRank": 61,
+    "catAdvRank": 29,
+    "catMainRank": 11,
+    "choices": [7, 1, 6, 4, 2, 8, 5, 3, 9, 10]
+  },
+  {
+    "id": "79",
+    "cat": "B",
+    "advRank": 89,
+    "mainRank": 159,
+    "catAdvRank": 20,
+    "catMainRank": 33,
+    "choices": [10, 2, 6, 7, 5, 4, 1, 8, 9, 3]
+  },
+  {
+    "id": "80",
+    "cat": "B",
+    "advRank": 17,
+    "mainRank": 110,
+    "catAdvRank": 4,
+    "catMainRank": 20,
+    "choices": [10, 7, 6, 5, 4, 8, 1, 9, 3, 2]
+  },
+  {
+    "id": "81",
+    "cat": "B",
+    "advRank": 152,
+    "mainRank": 43,
+    "catAdvRank": 33,
+    "catMainRank": 7,
+    "choices": [3, 10, 5, 1, 9, 7, 2, 6, 8, 4]
+  },
+  {
+    "id": "82",
+    "cat": "B",
+    "advRank": 75,
+    "mainRank": 145,
+    "catAdvRank": 15,
+    "catMainRank": 28,
+    "choices": [6, 5, 7, 2, 1, 10, 3, 4, 8, 9]
+  },
+  {
+    "id": "83",
+    "cat": "B",
+    "advRank": 130,
+    "mainRank": 80,
+    "catAdvRank": 27,
+    "catMainRank": 17,
+    "choices": [3, 2, 6, 4, 5, 1, 10, 9, 7, 8]
+  },
+  {
+    "id": "84",
+    "cat": "B",
+    "advRank": 31,
+    "mainRank": 129,
+    "catAdvRank": 8,
+    "catMainRank": 25,
+    "choices": [9, 6, 1, 3, 10, 8, 5, 7, 2, 4]
+  },
+  {
+    "id": "85",
+    "cat": "B",
+    "advRank": 160,
+    "mainRank": 21,
+    "catAdvRank": 35,
+    "catMainRank": 2,
+    "choices": [10, 2, 5, 1, 4, 3, 6, 9, 7, 8]
+  },
+  {
+    "id": "86",
+    "cat": "B",
+    "advRank": 83,
+    "mainRank": 155,
+    "catAdvRank": 18,
+    "catMainRank": 31,
+    "choices": [2, 3, 10, 1, 6, 7, 5, 8, 9, 4]
+  },
+  {
+    "id": "87",
+    "cat": "B",
+    "advRank": 119,
+    "mainRank": 76,
+    "catAdvRank": 24,
+    "catMainRank": 15,
+    "choices": [2, 5, 3, 4, 9, 8, 10, 6, 1, 7]
+  },
+  {
+    "id": "88",
+    "cat": "B",
+    "advRank": 22,
+    "mainRank": 180,
+    "catAdvRank": 6,
+    "catMainRank": 40,
+    "choices": [10, 2, 8, 6, 4, 3, 1, 7, 9, 5]
+  },
+  {
+    "id": "89",
+    "cat": "B",
+    "advRank": 149,
+    "mainRank": 51,
+    "catAdvRank": 32,
+    "catMainRank": 9,
+    "choices": [10, 4, 1, 9, 8, 3, 2, 7, 6, 5]
+  },
+  {
+    "id": "90",
+    "cat": "B",
+    "advRank": 91,
+    "mainRank": 161,
+    "catAdvRank": 21,
+    "catMainRank": 34,
+    "choices": [7, 5, 4, 10, 2, 3, 6, 1, 9, 8]
+  },
+  {
+    "id": "91",
+    "cat": "B",
+    "advRank": 15,
+    "mainRank": 112,
+    "catAdvRank": 3,
+    "catMainRank": 21,
+    "choices": [7, 5, 1, 3, 2, 6, 8, 10, 9, 4]
+  },
+  {
+    "id": "92",
+    "cat": "B",
+    "advRank": 166,
+    "mainRank": 37,
+    "catAdvRank": 37,
+    "catMainRank": 5,
+    "choices": [6, 4, 5, 1, 7, 9, 2, 8, 10, 3]
+  },
+  {
+    "id": "93",
+    "cat": "B",
+    "advRank": 77,
+    "mainRank": 154,
+    "catAdvRank": 16,
+    "catMainRank": 30,
+    "choices": [4, 7, 10, 1, 9, 2, 5, 8, 3, 6]
+  },
+  {
+    "id": "94",
+    "cat": "B",
+    "advRank": 133,
+    "mainRank": 82,
+    "catAdvRank": 28,
+    "catMainRank": 18,
+    "choices": [3, 5, 9, 1, 6, 8, 7, 10, 2, 4]
+  },
+  {
+    "id": "95",
+    "cat": "B",
+    "advRank": 38,
+    "mainRank": 130,
+    "catAdvRank": 10,
+    "catMainRank": 26,
+    "choices": [6, 4, 1, 10, 5, 9, 3, 8, 7, 2]
+  },
+  {
+    "id": "96",
+    "cat": "B",
+    "advRank": 192,
+    "mainRank": 28,
+    "catAdvRank": 39,
+    "catMainRank": 4,
+    "choices": [5, 1, 6, 9, 7, 4, 2, 8, 3, 10]
+  },
+  {
+    "id": "97",
+    "cat": "B",
+    "advRank": 49,
+    "mainRank": 170,
+    "catAdvRank": 12,
+    "catMainRank": 38,
+    "choices": [2, 9, 6, 10, 7, 5, 3, 8, 1, 4]
+  },
+  {
+    "id": "98",
+    "cat": "B",
+    "advRank": 140,
+    "mainRank": 65,
+    "catAdvRank": 30,
+    "catMainRank": 13,
+    "choices": [7, 3, 4, 10, 5, 2, 1, 8, 6, 9]
+  },
+  {
+    "id": "99",
+    "cat": "B",
+    "advRank": 95,
+    "mainRank": 163,
+    "catAdvRank": 23,
+    "catMainRank": 35,
+    "choices": [8, 10, 6, 1, 3, 5, 4, 7, 2, 9]
+  },
+  {
+    "id": "100",
+    "cat": "B",
+    "advRank": 13,
+    "mainRank": 116,
+    "catAdvRank": 2,
+    "catMainRank": 22,
+    "choices": [3, 2, 1, 9, 4, 6, 8, 5, 7, 10]
+  },
+  {
+    "id": "101",
+    "cat": "UR",
+    "advRank": 5,
+    "mainRank": 143,
+    "catAdvRank": 5,
+    "catMainRank": 70,
+    "choices": [9, 2, 1, 10, 4, 8, 6, 7, 5, 3]
+  },
+  {
+    "id": "102",
+    "cat": "UR",
+    "advRank": 170,
+    "mainRank": 60,
+    "catAdvRank": 82,
+    "catMainRank": 27,
+    "choices": [9, 3, 6, 8, 5, 1, 2, 10, 7, 4]
+  },
+  {
+    "id": "103",
+    "cat": "UR",
+    "advRank": 99,
+    "mainRank": 175,
+    "catAdvRank": 46,
+    "catMainRank": 81,
+    "choices": [2, 6, 10, 8, 9, 1, 3, 4, 7, 5]
+  },
+  {
+    "id": "104",
+    "cat": "UR",
+    "advRank": 30,
+    "mainRank": 86,
+    "catAdvRank": 17,
+    "catMainRank": 33,
+    "choices": [10, 4, 1, 6, 2, 8, 5, 3, 7, 9]
+  },
+  {
+    "id": "105",
+    "cat": "UR",
+    "advRank": 161,
+    "mainRank": 25,
+    "catAdvRank": 79,
+    "catMainRank": 13,
+    "choices": [6, 7, 5, 4, 3, 10, 9, 2, 8, 1]
+  },
+  {
+    "id": "106",
+    "cat": "UR",
+    "advRank": 74,
+    "mainRank": 146,
+    "catAdvRank": 36,
+    "catMainRank": 71,
+    "choices": [2, 10, 5, 7, 1, 6, 3, 8, 4, 9]
+  },
+  {
+    "id": "107",
+    "cat": "UR",
+    "advRank": 125,
+    "mainRank": 71,
+    "catAdvRank": 63,
+    "catMainRank": 30,
+    "choices": [5, 8, 9, 1, 6, 3, 7, 2, 10, 4]
+  },
+  {
+    "id": "108",
+    "cat": "UR",
+    "advRank": 20,
+    "mainRank": 182,
+    "catAdvRank": 14,
+    "catMainRank": 85,
+    "choices": [8, 1, 4, 7, 10, 9, 6, 5, 3, 2]
+  },
+  {
+    "id": "109",
+    "cat": "UR",
+    "advRank": 150,
+    "mainRank": 53,
+    "catAdvRank": 74,
+    "catMainRank": 23,
+    "choices": [5, 8, 10, 2, 4, 6, 3, 9, 1, 7]
+  },
+  {
+    "id": "110",
+    "cat": "UR",
+    "advRank": 81,
+    "mainRank": 164,
+    "catAdvRank": 39,
+    "catMainRank": 76,
+    "choices": [7, 9, 1, 4, 2, 5, 8, 3, 6, 10]
+  },
+  {
+    "id": "111",
+    "cat": "UR",
+    "advRank": 9,
+    "mainRank": 114,
+    "catAdvRank": 9,
+    "catMainRank": 54,
+    "choices": [1, 5, 9, 8, 10, 3, 6, 4, 7, 2]
+  },
+  {
+    "id": "112",
+    "cat": "UR",
+    "advRank": 174,
+    "mainRank": 42,
+    "catAdvRank": 84,
+    "catMainRank": 18,
+    "choices": [4, 6, 10, 7, 8, 5, 2, 3, 1, 9]
+  },
+  {
+    "id": "113",
+    "cat": "UR",
+    "advRank": 65,
+    "mainRank": 150,
+    "catAdvRank": 31,
+    "catMainRank": 73,
+    "choices": [4, 7, 3, 2, 10, 5, 8, 9, 6, 1]
+  },
+  {
+    "id": "114",
+    "cat": "UR",
+    "advRank": 123,
+    "mainRank": 84,
+    "catAdvRank": 62,
+    "catMainRank": 32,
+    "choices": [4, 8, 7, 1, 5, 2, 9, 10, 3, 6]
+  },
+  {
+    "id": "115",
+    "cat": "UR",
+    "advRank": 36,
+    "mainRank": 133,
+    "catAdvRank": 19,
+    "catMainRank": 62,
+    "choices": [9, 10, 3, 5, 8, 6, 2, 4, 1, 7]
+  },
+  {
+    "id": "116",
+    "cat": "UR",
+    "advRank": 195,
+    "mainRank": 18,
+    "catAdvRank": 96,
+    "catMainRank": 10,
+    "choices": [6, 4, 5, 1, 3, 9, 8, 10, 7, 2]
+  },
+  {
+    "id": "117",
+    "cat": "UR",
+    "advRank": 50,
+    "mainRank": 172,
+    "catAdvRank": 24,
+    "catMainRank": 79,
+    "choices": [5, 4, 7, 6, 10, 1, 2, 8, 3, 9]
+  },
+  {
+    "id": "118",
+    "cat": "UR",
+    "advRank": 141,
+    "mainRank": 69,
+    "catAdvRank": 70,
+    "catMainRank": 29,
+    "choices": [8, 7, 2, 10, 6, 9, 1, 3, 5, 4]
+  },
+  {
+    "id": "119",
+    "cat": "UR",
+    "advRank": 87,
+    "mainRank": 168,
+    "catAdvRank": 41,
+    "catMainRank": 78,
+    "choices": [9, 7, 1, 5, 2, 4, 6, 10, 8, 3]
+  },
+  {
+    "id": "120",
+    "cat": "UR",
+    "advRank": 12,
+    "mainRank": 118,
+    "catAdvRank": 11,
+    "catMainRank": 56,
+    "choices": [9, 3, 10, 5, 8, 2, 7, 1, 6, 4]
+  },
+  {
+    "id": "121",
+    "cat": "UR",
+    "advRank": 156,
+    "mainRank": 49,
+    "catAdvRank": 77,
+    "catMainRank": 21,
+    "choices": [7, 5, 4, 2, 9, 6, 10, 1, 8, 3]
+  },
+  {
+    "id": "122",
+    "cat": "UR",
+    "advRank": 71,
+    "mainRank": 142,
+    "catAdvRank": 34,
+    "catMainRank": 69,
+    "choices": [3, 7, 8, 9, 2, 1, 5, 10, 4, 6]
+  },
+  {
+    "id": "123",
+    "cat": "UR",
+    "advRank": 127,
+    "mainRank": 88,
+    "catAdvRank": 64,
+    "catMainRank": 35,
+    "choices": [9, 6, 4, 1, 3, 8, 10, 5, 2, 7]
+  },
+  {
+    "id": "124",
+    "cat": "UR",
+    "advRank": 26,
+    "mainRank": 136,
+    "catAdvRank": 16,
+    "catMainRank": 64,
+    "choices": [1, 3, 5, 2, 9, 6, 7, 10, 8, 4]
+  },
+  {
+    "id": "125",
+    "cat": "UR",
+    "advRank": 163,
+    "mainRank": 23,
+    "catAdvRank": 80,
+    "catMainRank": 12,
+    "choices": [5, 3, 9, 4, 7, 2, 1, 10, 8, 6]
+  },
+  {
+    "id": "126",
+    "cat": "UR",
+    "advRank": 80,
+    "mainRank": 162,
+    "catAdvRank": 38,
+    "catMainRank": 75,
+    "choices": [3, 2, 5, 7, 6, 10, 1, 4, 9, 8]
+  },
+  {
+    "id": "127",
+    "cat": "UR",
+    "advRank": 113,
+    "mainRank": 92,
+    "catAdvRank": 58,
+    "catMainRank": 38,
+    "choices": [9, 3, 1, 4, 10, 7, 2, 6, 5, 8]
+  },
+  {
+    "id": "128",
+    "cat": "UR",
+    "advRank": 16,
+    "mainRank": 186,
+    "catAdvRank": 13,
+    "catMainRank": 88,
+    "choices": [4, 8, 9, 5, 7, 1, 10, 2, 6, 3]
+  },
+  {
+    "id": "129",
+    "cat": "UR",
+    "advRank": 147,
+    "mainRank": 57,
+    "catAdvRank": 73,
+    "catMainRank": 25,
+    "choices": [6, 8, 5, 10, 3, 9, 2, 1, 7, 4]
+  },
+  {
+    "id": "130",
+    "cat": "UR",
+    "advRank": 88,
+    "mainRank": 173,
+    "catAdvRank": 42,
+    "catMainRank": 80,
+    "choices": [9, 3, 7, 5, 4, 2, 8, 10, 1, 6]
+  },
+  {
+    "id": "131",
+    "cat": "UR",
+    "advRank": 7,
+    "mainRank": 120,
+    "catAdvRank": 7,
+    "catMainRank": 57,
+    "choices": [10, 3, 6, 1, 9, 7, 4, 5, 8, 2]
+  },
+  {
+    "id": "132",
+    "cat": "UR",
+    "advRank": 180,
+    "mainRank": 44,
+    "catAdvRank": 88,
+    "catMainRank": 19,
+    "choices": [4, 1, 6, 8, 10, 5, 7, 3, 2, 9]
+  },
+  {
+    "id": "133",
+    "cat": "UR",
+    "advRank": 103,
+    "mainRank": 140,
+    "catAdvRank": 49,
+    "catMainRank": 67,
+    "choices": [8, 5, 3, 10, 9, 1, 2, 7, 4, 6]
+  },
+  {
+    "id": "134",
+    "cat": "UR",
+    "advRank": 40,
+    "mainRank": 126,
+    "catAdvRank": 20,
+    "catMainRank": 60,
+    "choices": [2, 7, 1, 5, 9, 3, 4, 6, 8, 10]
+  },
+  {
+    "id": "135",
+    "cat": "UR",
+    "advRank": 199,
+    "mainRank": 16,
+    "catAdvRank": 99,
+    "catMainRank": 8,
+    "choices": [2, 6, 7, 1, 10, 3, 8, 9, 4, 5]
+  },
+  {
+    "id": "136",
+    "cat": "UR",
+    "advRank": 54,
+    "mainRank": 177,
+    "catAdvRank": 26,
+    "catMainRank": 82,
+    "choices": [10, 7, 1, 9, 5, 6, 3, 4, 2, 8]
+  },
+  {
+    "id": "137",
+    "cat": "UR",
+    "advRank": 139,
+    "mainRank": 75,
+    "catAdvRank": 69,
+    "catMainRank": 31,
+    "choices": [10, 8, 1, 3, 6, 2, 7, 5, 4, 9]
+  },
+  {
+    "id": "138",
+    "cat": "UR",
+    "advRank": 92,
+    "mainRank": 181,
+    "catAdvRank": 43,
+    "catMainRank": 84,
+    "choices": [10, 2, 5, 1, 3, 4, 9, 7, 8, 6]
+  },
+  {
+    "id": "139",
+    "cat": "UR",
+    "advRank": 3,
+    "mainRank": 124,
+    "catAdvRank": 3,
+    "catMainRank": 59,
+    "choices": [7, 2, 10, 9, 8, 4, 5, 1, 3, 6]
+  },
+  {
+    "id": "140",
+    "cat": "UR",
+    "advRank": 182,
+    "mainRank": 40,
+    "catAdvRank": 90,
+    "catMainRank": 17,
+    "choices": [3, 4, 8, 10, 1, 7, 9, 5, 2, 6]
+  },
+  {
+    "id": "141",
+    "cat": "UR",
+    "advRank": 107,
+    "mainRank": 100,
+    "catAdvRank": 53,
+    "catMainRank": 44,
+    "choices": [5, 6, 9, 1, 2, 7, 4, 10, 3, 8]
+  },
+  {
+    "id": "142",
+    "cat": "UR",
+    "advRank": 24,
+    "mainRank": 138,
+    "catAdvRank": 15,
+    "catMainRank": 66,
+    "choices": [10, 8, 9, 5, 3, 2, 6, 1, 4, 7]
+  },
+  {
+    "id": "143",
+    "cat": "UR",
+    "advRank": 151,
+    "mainRank": 55,
+    "catAdvRank": 75,
+    "catMainRank": 24,
+    "choices": [5, 9, 6, 7, 10, 3, 2, 4, 8, 1]
+  },
+  {
+    "id": "144",
+    "cat": "UR",
+    "advRank": 79,
+    "mainRank": 158,
+    "catAdvRank": 37,
+    "catMainRank": 74,
+    "choices": [9, 10, 5, 7, 1, 2, 6, 4, 3, 8]
+  },
+  {
+    "id": "145",
+    "cat": "UR",
+    "advRank": 129,
+    "mainRank": 90,
+    "catAdvRank": 65,
+    "catMainRank": 36,
+    "choices": [7, 9, 4, 8, 2, 5, 10, 3, 1, 6]
+  },
+  {
+    "id": "146",
+    "cat": "UR",
+    "advRank": 10,
+    "mainRank": 134,
+    "catAdvRank": 10,
+    "catMainRank": 63,
+    "choices": [4, 7, 6, 10, 2, 1, 3, 8, 5, 9]
+  },
+  {
+    "id": "147",
+    "cat": "UR",
+    "advRank": 186,
+    "mainRank": 34,
+    "catAdvRank": 93,
+    "catMainRank": 16,
+    "choices": [7, 5, 9, 2, 10, 8, 3, 4, 1, 6]
+  },
+  {
+    "id": "148",
+    "cat": "UR",
+    "advRank": 105,
+    "mainRank": 104,
+    "catAdvRank": 51,
+    "catMainRank": 47,
+    "choices": [2, 5, 3, 8, 1, 10, 6, 7, 4, 9]
+  },
+  {
+    "id": "149",
+    "cat": "UR",
+    "advRank": 48,
+    "mainRank": 179,
+    "catAdvRank": 23,
+    "catMainRank": 83,
+    "choices": [6, 5, 10, 3, 7, 9, 2, 8, 4, 1]
+  },
+  {
+    "id": "150",
+    "cat": "UR",
+    "advRank": 143,
+    "mainRank": 67,
+    "catAdvRank": 71,
+    "catMainRank": 28,
+    "choices": [3, 2, 10, 4, 6, 8, 5, 7, 1, 9]
+  },
+  {
+    "id": "151",
+    "cat": "UR",
+    "advRank": 6,
+    "mainRank": 122,
+    "catAdvRank": 6,
+    "catMainRank": 58,
+    "choices": [3, 8, 10, 4, 6, 7, 5, 1, 2, 9]
+  },
+  {
+    "id": "152",
+    "cat": "UR",
+    "advRank": 184,
+    "mainRank": 46,
+    "catAdvRank": 91,
+    "catMainRank": 20,
+    "choices": [10, 4, 8, 1, 3, 5, 7, 9, 6, 2]
+  },
+  {
+    "id": "153",
+    "cat": "UR",
+    "advRank": 109,
+    "mainRank": 108,
+    "catAdvRank": 55,
+    "catMainRank": 50,
+    "choices": [7, 4, 5, 1, 3, 2, 8, 6, 9, 10]
+  },
+  {
+    "id": "154",
+    "cat": "UR",
+    "advRank": 33,
+    "mainRank": 137,
+    "catAdvRank": 18,
+    "catMainRank": 65,
+    "choices": [8, 6, 2, 9, 7, 4, 1, 3, 5, 10]
+  },
+  {
+    "id": "155",
+    "cat": "UR",
+    "advRank": 200,
+    "mainRank": 1,
+    "catAdvRank": 100,
+    "catMainRank": 1,
+    "choices": [7, 9, 2, 10, 3, 8, 1, 4, 5, 6]
+  },
+  {
+    "id": "156",
+    "cat": "UR",
+    "advRank": 58,
+    "mainRank": 185,
+    "catAdvRank": 28,
+    "catMainRank": 87,
+    "choices": [4, 6, 3, 5, 9, 1, 8, 2, 7, 10]
+  },
+  {
+    "id": "157",
+    "cat": "UR",
+    "advRank": 137,
+    "mainRank": 91,
+    "catAdvRank": 68,
+    "catMainRank": 37,
+    "choices": [4, 8, 1, 10, 5, 7, 3, 6, 2, 9]
+  },
+  {
+    "id": "158",
+    "cat": "UR",
+    "advRank": 96,
+    "mainRank": 187,
+    "catAdvRank": 44,
+    "catMainRank": 89,
+    "choices": [9, 2, 3, 1, 4, 7, 5, 6, 8, 10]
+  },
+  {
+    "id": "159",
+    "cat": "UR",
+    "advRank": 1,
+    "mainRank": 200,
+    "catAdvRank": 1,
+    "catMainRank": 100,
+    "choices": [6, 10, 5, 7, 1, 2, 4, 8, 3, 9]
+  },
+  {
+    "id": "160",
+    "cat": "UR",
+    "advRank": 190,
+    "mainRank": 32,
+    "catAdvRank": 95,
+    "catMainRank": 15,
+    "choices": [7, 3, 10, 1, 6, 4, 5, 9, 8, 2]
+  },
+  {
+    "id": "161",
+    "cat": "UR",
+    "advRank": 111,
+    "mainRank": 96,
+    "catAdvRank": 57,
+    "catMainRank": 41,
+    "choices": [1, 3, 2, 6, 10, 8, 7, 4, 5, 9]
+  },
+  {
+    "id": "162",
+    "cat": "UR",
+    "advRank": 14,
+    "mainRank": 142,
+    "catAdvRank": 12,
+    "catMainRank": 68,
+    "choices": [4, 9, 8, 2, 3, 6, 5, 7, 10, 1]
+  },
+  {
+    "id": "163",
+    "cat": "UR",
+    "advRank": 145,
+    "mainRank": 58,
+    "catAdvRank": 72,
+    "catMainRank": 26,
+    "choices": [1, 4, 3, 5, 7, 2, 6, 10, 8, 9]
+  },
+  {
+    "id": "164",
+    "cat": "UR",
+    "advRank": 86,
+    "mainRank": 188,
+    "catAdvRank": 40,
+    "catMainRank": 90,
+    "choices": [9, 5, 2, 4, 3, 7, 10, 8, 1, 6]
+  },
+  {
+    "id": "165",
+    "cat": "UR",
+    "advRank": 4,
+    "mainRank": 150,
+    "catAdvRank": 4,
+    "catMainRank": 72,
+    "choices": [1, 6, 10, 5, 9, 3, 7, 4, 2, 8]
+  },
+  {
+    "id": "166",
+    "cat": "UR",
+    "advRank": 196,
+    "mainRank": 12,
+    "catAdvRank": 97,
+    "catMainRank": 5,
+    "choices": [8, 7, 9, 6, 10, 3, 5, 2, 1, 4]
+  },
+  {
+    "id": "167",
+    "cat": "UR",
+    "advRank": 62,
+    "mainRank": 183,
+    "catAdvRank": 29,
+    "catMainRank": 86,
+    "choices": [8, 5, 7, 10, 9, 3, 2, 1, 6, 4]
+  },
+  {
+    "id": "168",
+    "cat": "UR",
+    "advRank": 131,
+    "mainRank": 94,
+    "catAdvRank": 66,
+    "catMainRank": 40,
+    "choices": [1, 6, 7, 5, 4, 2, 10, 8, 3, 9]
+  },
+  {
+    "id": "169",
+    "cat": "UR",
+    "advRank": 8,
+    "mainRank": 132,
+    "catAdvRank": 8,
+    "catMainRank": 61,
+    "choices": [1, 9, 3, 2, 5, 8, 7, 6, 10, 4]
+  },
+  {
+    "id": "170",
+    "cat": "UR",
+    "advRank": 198,
+    "mainRank": 10,
+    "catAdvRank": 98,
+    "catMainRank": 4,
+    "choices": [4, 1, 9, 6, 5, 7, 3, 8, 2, 10]
+  },
+  {
+    "id": "171",
+    "cat": "UR",
+    "advRank": 108,
+    "mainRank": 111,
+    "catAdvRank": 54,
+    "catMainRank": 52,
+    "choices": [1, 2, 10, 5, 3, 9, 6, 4, 7, 8]
+  },
+  {
+    "id": "172",
+    "cat": "UR",
+    "advRank": 45,
+    "mainRank": 168,
+    "catAdvRank": 22,
+    "catMainRank": 77,
+    "choices": [8, 4, 3, 7, 9, 2, 1, 6, 10, 5]
+  },
+  {
+    "id": "173",
+    "cat": "UR",
+    "advRank": 154,
+    "mainRank": 50,
+    "catAdvRank": 76,
+    "catMainRank": 22,
+    "choices": [8, 10, 3, 7, 4, 5, 9, 2, 6, 1]
+  },
+  {
+    "id": "174",
+    "cat": "UR",
+    "advRank": 101,
+    "mainRank": 117,
+    "catAdvRank": 47,
+    "catMainRank": 55,
+    "choices": [1, 6, 7, 2, 3, 5, 9, 4, 8, 10]
+  },
+  {
+    "id": "175",
+    "cat": "UR",
+    "advRank": 2,
+    "mainRank": 199,
+    "catAdvRank": 2,
+    "catMainRank": 99,
+    "choices": [7, 9, 6, 8, 5, 10, 1, 2, 4, 3]
+  },
+  {
+    "id": "176",
+    "cat": "UR",
+    "advRank": 185,
+    "mainRank": 30,
+    "catAdvRank": 92,
+    "catMainRank": 14,
+    "choices": [1, 3, 2, 10, 9, 5, 8, 7, 6, 4]
+  },
+  {
+    "id": "177",
+    "cat": "UR",
+    "advRank": 117,
+    "mainRank": 105,
+    "catAdvRank": 60,
+    "catMainRank": 48,
+    "choices": [2, 7, 6, 10, 8, 5, 1, 3, 4, 9]
+  },
+  {
+    "id": "178",
+    "cat": "UR",
+    "advRank": 52,
+    "mainRank": 189,
+    "catAdvRank": 25,
+    "catMainRank": 91,
+    "choices": [9, 6, 7, 3, 5, 8, 4, 10, 2, 1]
+  },
+  {
+    "id": "179",
+    "cat": "UR",
+    "advRank": 158,
+    "mainRank": 93,
+    "catAdvRank": 78,
+    "catMainRank": 39,
+    "choices": [6, 5, 8, 10, 4, 1, 3, 9, 7, 2]
+  },
+  {
+    "id": "180",
+    "cat": "UR",
+    "advRank": 110,
+    "mainRank": 109,
+    "catAdvRank": 56,
+    "catMainRank": 51,
+    "choices": [2, 8, 6, 3, 5, 1, 9, 7, 10, 4]
+  },
+  {
+    "id": "181",
+    "cat": "UR",
+    "advRank": 187,
+    "mainRank": 20,
+    "catAdvRank": 94,
+    "catMainRank": 11,
+    "choices": [2, 1, 9, 4, 6, 8, 5, 3, 7, 10]
+  },
+  {
+    "id": "182",
+    "cat": "UR",
+    "advRank": 72,
+    "mainRank": 191,
+    "catAdvRank": 35,
+    "catMainRank": 92,
+    "choices": [1, 7, 2, 3, 5, 6, 8, 9, 4, 10]
+  },
+  {
+    "id": "183",
+    "cat": "UR",
+    "advRank": 133,
+    "mainRank": 97,
+    "catAdvRank": 67,
+    "catMainRank": 42,
+    "choices": [1, 7, 3, 4, 9, 10, 6, 2, 5, 8]
+  },
+  {
+    "id": "184",
+    "cat": "UR",
+    "advRank": 64,
+    "mainRank": 192,
+    "catAdvRank": 30,
+    "catMainRank": 93,
+    "choices": [7, 9, 10, 6, 8, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": "185",
+    "cat": "UR",
+    "advRank": 175,
+    "mainRank": 17,
+    "catAdvRank": 85,
+    "catMainRank": 9,
+    "choices": [5, 10, 9, 8, 1, 3, 6, 4, 2, 7]
+  },
+  {
+    "id": "186",
+    "cat": "UR",
+    "advRank": 115,
+    "mainRank": 103,
+    "catAdvRank": 59,
+    "catMainRank": 46,
+    "choices": [9, 1, 6, 4, 7, 10, 3, 5, 2, 8]
+  },
+  {
+    "id": "187",
+    "cat": "UR",
+    "advRank": 56,
+    "mainRank": 193,
+    "catAdvRank": 27,
+    "catMainRank": 94,
+    "choices": [1, 9, 10, 5, 2, 7, 6, 4, 8, 3]
+  },
+  {
+    "id": "188",
+    "cat": "UR",
+    "advRank": 169,
+    "mainRank": 87,
+    "catAdvRank": 81,
+    "catMainRank": 34,
+    "choices": [7, 2, 1, 5, 8, 6, 4, 3, 10, 9]
+  },
+  {
+    "id": "189",
+    "cat": "UR",
+    "advRank": 102,
+    "mainRank": 113,
+    "catAdvRank": 48,
+    "catMainRank": 53,
+    "choices": [6, 1, 8, 2, 10, 9, 7, 5, 3, 4]
+  },
+  {
+    "id": "190",
+    "cat": "UR",
+    "advRank": 43,
+    "mainRank": 194,
+    "catAdvRank": 21,
+    "catMainRank": 95,
+    "choices": [8, 3, 10, 6, 1, 7, 9, 5, 2, 4]
+  },
+  {
+    "id": "191",
+    "cat": "UR",
+    "advRank": 181,
+    "mainRank": 15,
+    "catAdvRank": 89,
+    "catMainRank": 7,
+    "choices": [8, 5, 3, 9, 10, 4, 2, 6, 7, 1]
+  },
+  {
+    "id": "192",
+    "cat": "UR",
+    "advRank": 120,
+    "mainRank": 107,
+    "catAdvRank": 61,
+    "catMainRank": 49,
+    "choices": [4, 8, 6, 1, 3, 2, 7, 9, 5, 10]
+  },
+  {
+    "id": "193",
+    "cat": "UR",
+    "advRank": 70,
+    "mainRank": 195,
+    "catAdvRank": 33,
+    "catMainRank": 96,
+    "choices": [9, 7, 1, 4, 2, 3, 10, 6, 5, 8]
+  },
+  {
+    "id": "194",
+    "cat": "UR",
+    "advRank": 179,
+    "mainRank": 13,
+    "catAdvRank": 87,
+    "catMainRank": 6,
+    "choices": [3, 5, 4, 9, 1, 8, 6, 2, 7, 10]
+  },
+  {
+    "id": "195",
+    "cat": "UR",
+    "advRank": 104,
+    "mainRank": 101,
+    "catAdvRank": 50,
+    "catMainRank": 45,
+    "choices": [3, 8, 4, 5, 7, 2, 10, 1, 9, 6]
+  },
+  {
+    "id": "196",
+    "cat": "UR",
+    "advRank": 66,
+    "mainRank": 196,
+    "catAdvRank": 32,
+    "catMainRank": 97,
+    "choices": [4, 8, 6, 1, 5, 3, 7, 2, 10, 9]
+  },
+  {
+    "id": "197",
+    "cat": "UR",
+    "advRank": 171,
+    "mainRank": 9,
+    "catAdvRank": 83,
+    "catMainRank": 3,
+    "choices": [1, 8, 4, 3, 5, 6, 2, 9, 10, 7]
+  },
+  {
+    "id": "198",
+    "cat": "UR",
+    "advRank": 98,
+    "mainRank": 99,
+    "catAdvRank": 45,
+    "catMainRank": 43,
+    "choices": [8, 2, 7, 10, 5, 1, 6, 4, 3, 9]
+  },
+  {
+    "id": "199",
+    "cat": "UR",
+    "advRank": 177,
+    "mainRank": 7,
+    "catAdvRank": 86,
+    "catMainRank": 2,
+    "choices": [9, 10, 6, 2, 1, 3, 4, 7, 5, 8]
+  },
+  {
+    "id": "200",
+    "cat": "UR",
+    "advRank": 106,
+    "mainRank": 197,
+    "catAdvRank": 52,
+    "catMainRank": 98,
+    "choices": [6, 7, 8, 1, 9, 2, 5, 3, 10, 4]
+  }
+]
