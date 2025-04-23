@@ -54,6 +54,30 @@ exports.updateCollegeProfile = async (req, res) => {
     }
 };
 
+exports.getBranch = async (req, res) => {
+  try {
+    const { clgId, clgName } = req.query;
+
+    if (!clgId && !clgName) {
+      return res.status(400).json({ message: "College ID or Name is required" });
+    }
+
+    // Find branches by clgId or clgName
+    const query = clgId ? { collegeId: clgId } : { collegeName: clgName };
+
+    const branches = await Branch.find(query);
+
+    if (!branches.length) {
+      return res.status(404).json({ message: "No branches found for the specified college" });
+    }
+
+    res.status(200).json({ branches });
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error", error: error.message });
+  }
+};
+
+
 exports.addBranchToCollege = async (req, res) => {
   try {
     const { registrationId } = req.college;
