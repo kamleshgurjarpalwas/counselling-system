@@ -7,6 +7,7 @@ const userAuthanticater = require("../../middleware/authUser.middleware");
 const choiceUpdationController = require("../../controllers/userControllers/userChoiceSelection.controller");
 const allChoicesSupply = require("../../controllers/userControllers/allChoicesSupply.controller");
 const selectedChoicesController = require("../../controllers/userControllers/selectedChoices.controller");
+const resultControll = require("../../controllers/userControllers/userResult.controller");
 routers.post(
   "/register",
   [
@@ -96,4 +97,9 @@ routers.patch(
   choiceUpdationController.swapChoice
 );
 
+routers.get(
+  "/getUserResult",
+  userAuthanticater.authUser,
+  resultControll.getUserResult
+);
 module.exports = routers;

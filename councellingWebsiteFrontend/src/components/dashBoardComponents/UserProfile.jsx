@@ -8,6 +8,9 @@ const UserDashboard = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [result, setResult] = useState(null);
+  const [resultLoading, setResultLoading] = useState(false);
+  const [resultError, setResultError] = useState(null);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -34,6 +37,31 @@ const UserDashboard = () => {
 
     fetchUserData();
   }, []);
+
+  const fetchResult = async () => {
+    try {
+      setResultLoading(true);
+      setResultError(null);
+      const response = await axios.get(
+        "http://localhost:4000/user/getUserResult",
+        {
+          withCredentials: true,
+        }
+      );
+
+      if (response.status === 200) {
+        setResult(response.data);
+      }
+    } catch (err) {
+      console.error("Failed to fetch result:", err);
+      setResultError(
+        err.response?.data?.message ||
+          "Failed to fetch result. Please try again."
+      );
+    } finally {
+      setResultLoading(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -66,10 +94,62 @@ const UserDashboard = () => {
           <h2 className="text-2xl font-semibold text-gray-800 text-center flex-1">
             Candidate Profile
           </h2>
-          <Link to={`/choices`}>
-            <Button className="ml-auto">Choice Filling</Button>
-          </Link>
+          <div className="flex gap-2">
+            <Button onClick={fetchResult} disabled={resultLoading}>
+              {resultLoading ? (
+                <>
+                  <FaSpinner className="animate-spin inline-block mr-2" />{" "}
+                  Loading...
+                </>
+              ) : (
+                "View Result"
+              )}
+            </Button>
+            <Link to={`/choices`}>
+              <Button>Choice Filling</Button>
+            </Link>
+          </div>
         </div>
+
+        {resultError && (
+          <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md">
+            {resultError}
+          </div>
+        )}
+
+        {result && (
+          <div className="mb-6 border border-green-200 bg-green-50 p-4 rounded-md shadow-sm">
+            <h3 className="text-lg font-semibold text-green-800 mb-3">
+              Your Allotment Result
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <p className="text-gray-700">
+                  <strong>College:</strong> {result.choiceDetail.collegeName}
+                </p>
+                <p className="text-gray-700">
+                  <strong>Branch:</strong> {result.choiceDetail.branchName}
+                </p>
+                <p className="text-gray-700">
+                  <strong>Program:</strong> {result.choiceDetail.description}
+                </p>
+              </div>
+              <div>
+                <p className="text-gray-700">
+                  <strong>Duration:</strong> {result.choiceDetail.duration}{" "}
+                  years
+                </p>
+                <p className="text-gray-700">
+                  <strong>Allotted Choice No.:</strong>{" "}
+                  {result.allotedChoiceNumber}
+                </p>
+                <p className="text-gray-700">
+                  <strong>Tag:</strong> {result.choiceDetail.tag.toUpperCase()}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* User Information */}

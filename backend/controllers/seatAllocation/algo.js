@@ -249,7 +249,7 @@ function allocateSeats(candidates, choices) {
 const results = allocateSeats(candidates, choices);
 // console.log(results);
 
-fs.writeFileSync("result.json", JSON.stringify(results.allocations, null, 2));
+fs.writeFileSync("result.json", JSON.stringify(results.choiceStats, null, 2));
 
 // Output the results
 // console.log(

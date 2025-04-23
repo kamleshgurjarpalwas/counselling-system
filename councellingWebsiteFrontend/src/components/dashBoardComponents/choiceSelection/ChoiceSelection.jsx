@@ -70,6 +70,12 @@ const ChoicesSelection = () => {
     tempState[index1] = tempState[index2];
     tempState[index2] = temp;
     setSelectedChoicesDetails(tempState);
+    //for ids
+    let tempIdState = [...selectedChoicesId];
+    const tempT = tempIdState[index1];
+    tempIdState[index1] = tempIdState[index2];
+    tempIdState[index2] = tempT;
+    setSelectedChoicesId(tempIdState);
     return;
   };
 
@@ -79,6 +85,12 @@ const ChoicesSelection = () => {
     tempState[index] = tempState[index - 1];
     tempState[index - 1] = temp;
     setSelectedChoicesDetails(tempState);
+    //for ids
+    let tempIdState = [...selectedChoicesId];
+    const tempT = tempIdState[index];
+    tempIdState[index] = tempIdState[index - 1];
+    tempIdState[index - 1] = tempT;
+    setSelectedChoicesId(tempIdState);
     return;
   };
 
@@ -88,6 +100,12 @@ const ChoicesSelection = () => {
     tempState[index] = tempState[index + 1];
     tempState[index + 1] = temp;
     setSelectedChoicesDetails(tempState);
+    //for ids
+    let tempIdState = [...selectedChoicesId];
+    const tempT = tempIdState[index];
+    tempIdState[index] = tempIdState[index + 1];
+    tempIdState[index + 1] = tempT;
+    setSelectedChoicesId(tempIdState);
     return;
   };
 
@@ -154,6 +172,7 @@ const ChoicesSelection = () => {
             withCredentials: true,
           }
         );
+        console.log("CALLED");
         setSelectedChoicesId(response.data.selectedChoices);
       } catch (error) {
         setErrorMessage(true);
@@ -162,7 +181,7 @@ const ChoicesSelection = () => {
       }
     };
     fetchSelectedChoices();
-  }, []);
+  }, [choices]);
 
   //submitting the selected choices
   const submitSelectedChoices = async () => {
