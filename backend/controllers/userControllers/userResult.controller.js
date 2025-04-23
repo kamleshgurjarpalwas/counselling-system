@@ -18,7 +18,7 @@ module.exports.getUserResult = async (req, res) => {
 
     // 2. Find the college name and branch name from the result entry
     const choiceDetail = await fetch(
-      "http://localhost:4000/api/colleges-info/all-choices"
+      "http://localhost:4000/api/colleges-info/all-choices?limit=1000",
     )
       .then((response) => response.json())
       .then((data) => {
