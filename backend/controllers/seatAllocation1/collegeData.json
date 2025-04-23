@@ -1,0 +1,73 @@
+[
+  {
+    "choiceId": 1,
+    "type": "X",
+    "seats": [
+      { "cat": "UR", "seats": 2 },
+      { "cat": "A", "seats": 1 },
+      { "cat": "B", "seats": 1 }
+    ]
+  },
+  {
+    "choiceId": 2,
+    "type": "Y",
+    "seats": [{ "cat": "UR", "seats": 3 }]
+  },
+  {
+    "choiceId": 3,
+    "type": "x",
+    "seats": [
+      { "cat": "UR", "seats": 1 },
+      { "cat": "A", "seats": 1 },
+      { "cat": "B", "seats": 1 }
+    ]
+  },
+  {
+    "choiceId": 4,
+    "type": "x",
+    "seats": [{ "cat": "A", "seats": 2 }]
+  },
+  {
+    "choiceId": 5,
+    "type": "X",
+    "seats": [{ "cat": "UR", "seats": 2 }]
+  },
+  {
+    "choiceId": 6,
+    "type": "Y",
+    "seats": [
+      { "cat": "UR", "seats": 1 },
+      { "cat": "B", "seats": 1 }
+    ]
+  },
+  {
+    "choiceId": 7,
+    "type": "y",
+    "seats": [
+      { "cat": "UR", "seats": 1 },
+      { "cat": "A", "seats": 1 },
+      { "cat": "B", "seats": 1 }
+    ]
+  },
+  {
+    "choiceId": 8,
+    "type": "x",
+    "seats": [
+      { "cat": "A", "seats": 1 },
+      { "cat": "B", "seats": 1 }
+    ]
+  },
+  {
+    "choiceId": 9,
+    "type": "X",
+    "seats": [{ "cat": "UR", "seats": 2 }]
+  },
+  {
+    "choiceId": 10,
+    "type": "Y",
+    "seats": [
+      { "cat": "UR", "seats": 2 },
+      { "cat": "B", "seats": 1 }
+    ]
+  }
+]

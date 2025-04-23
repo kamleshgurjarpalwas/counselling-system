@@ -1,24 +1,17 @@
 const fs = require("fs");
 
-// Read the JSON file
-const data = JSON.parse(fs.readFileSync("tempStdData.json", "utf8"));
+// Load your JSON data (assuming it's in a file called "data.json")
+let data = require("./tempStdData.json");
 
-data.forEach((element) => {
-  let choices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  let selectedChoices = [];
-  let cnt = 10;
-
-  // while (cnt) {
-  //   let rand = Math.floor(Math.random() * cnt);
-  //   cnt--;
-  //   selectedChoices.push(choices[rand]);
-  //   choices = choices.filter((e, i) => i != rand);
-  // }
-
-  element.choices = choices;
+// Process the data
+data.forEach((student) => {
+  if (student.advRank === undefined) {
+    student.choices = student.choices.filter((choice) => choice % 2 === 0); // Keep only even choices
+  }
 });
 
-// Write the updated data back to the file
-fs.writeFileSync("tempStdData.json", JSON.stringify(data, null, 2));
+// Optional: Print updated data
+console.log(JSON.stringify(data, null, 2));
 
-console.log("Updated student ranks saved.");
+// Optional: Write back to the file
+fs.writeFileSync("./tempStdData.json", JSON.stringify(data, null, 2));

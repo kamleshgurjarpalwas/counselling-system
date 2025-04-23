@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "http://localhost:5174"],
     credentials: true,
   })
 );
@@ -18,6 +18,7 @@ app.use(
 const userRouters = require("./routes/userRoutes/userRoutes.js");
 const adminRoutes = require("./routes/adminRoutes/admin.route.js");
 const updateRotes = require("./routes/latestRoutes/latestUpdate.route.js");
+const dataRoute = require("./routes/adminRoutes/result.route.js");
 
 // dilip routes
 const collegeAuthRoutes = require("./routes/collegeRoutes/collegeAuthRoutes.js");
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
 });
 
 // kamlesh routing
+app.use("/data", dataRoute);
 app.use("/user", userRouters);
 app.use("/admin", adminRoutes);
 app.use("/update", updateRotes);

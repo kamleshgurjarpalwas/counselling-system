@@ -5,7 +5,8 @@ exports.pushSelectedChoices = async (req, res) => {
     user.choosedChoices = newSelectedChices; // Update the user's selected choices
     await user.save(); // Save the updated user document
     res.status(200).json({
-      message: "Selected choices saved successfully"
+      message: "Selected choices saved successfully",
+      choices: user.choosedChoices,
     });
   } catch (error) {
     console.error("Error saving selected choices:", error);
