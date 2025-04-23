@@ -14,7 +14,6 @@ import { Loader2 } from "lucide-react";
 const AllFilters = ({ onFetch }) => {
   const { state, dispatch } = useCollege();
 
-  // Local state for filtering search results
   const [collegeSearch, setCollegeSearch] = useState("");
   const [branchSearch, setBranchSearch] = useState("");
 
@@ -28,7 +27,6 @@ const AllFilters = ({ onFetch }) => {
 
   return (
     <div className="p-6 space-y-4 flex flex-col max-w-lg mx-auto">
-      {/* College Type */}
       <div className="flex items-center space-x-4">
         <label className="text-gray-700 font-medium w-32">College Type</label>
         <Select
@@ -50,7 +48,6 @@ const AllFilters = ({ onFetch }) => {
         </Select>
       </div>
 
-      {/* College Selection with Search */}
       <div className="flex items-center space-x-4">
         <label className="text-gray-700 font-medium w-32">College</label>
         <Select
@@ -85,7 +82,6 @@ const AllFilters = ({ onFetch }) => {
         </Select>
       </div>
 
-      {/* Branch Selection with Search */}
       <div className="flex items-center space-x-4">
         <label className="text-gray-700 font-medium w-32">Branch</label>
         <Select
@@ -120,7 +116,6 @@ const AllFilters = ({ onFetch }) => {
         </Select>
       </div>
 
-      {/* Year Selection */}
       <div className="flex items-center space-x-4">
         <label className="text-gray-700 font-medium w-32">Year</label>
         <Select
@@ -142,7 +137,6 @@ const AllFilters = ({ onFetch }) => {
         </Select>
       </div>
 
-      {/* Category Selection */}
       <div className="flex items-center space-x-4">
         <label className="text-gray-700 font-medium w-32">Category</label>
         <Select
@@ -164,7 +158,6 @@ const AllFilters = ({ onFetch }) => {
         </Select>
       </div>
 
-      {/* Get Data Button */}
       <div className="w-full flex justify-center items-center">
         <Button
           onClick={onFetch}

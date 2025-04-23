@@ -17,8 +17,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const formSchema = z.object({
-  collegeId: z.string().min(3, "College ID is required"),
-  collegeTag: z.string().min(4, "College Tag is required"),
+  collegeId: z.string().min(4, "College ID is required"),
+  collegeTag: z.string().min(3, "College Tag is required"),
   collegeName: z.string().min(6, "College Name is required"),
   collegeMail: z.string().email("Invalid email address"),
   password: z.string().min(6, "Password must be at least 6 characters"),

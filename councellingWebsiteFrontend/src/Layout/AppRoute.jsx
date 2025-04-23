@@ -7,6 +7,7 @@ import TimeTable from "@/pages/TimeTable";
 import ChoicesSelection from "@/components/dashBoardComponents/choiceSelection/ChoiceSelection";
 import RegistrationForm from "@/components/HomePageComponents/Registeration";
 import CollegeDropdowns from "../pages/OcOrPage"
+import SeatMatrixPage from "../pages/SeatMatrixPage"
 
 function AppRoutes() {
   return (
@@ -17,8 +18,8 @@ function AppRoutes() {
       <Route path="/timetable" element={<TimeTable />} />
       <Route path="/register" element={<RegistrationForm />} />
       <Route path="/choices" element={<ChoicesSelection />} />
-      {/* Add more routes as needed */}
       <Route path="/opening-closing-rank" element={<CollegeDropdowns />} />
+      <Route path="/seat-matrix" element={<SeatMatrixPage />} />
     </Routes>
   );
 }
