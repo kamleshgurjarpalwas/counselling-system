@@ -31,6 +31,8 @@ function seatAllocation(clgs, students, cat = null) {
   while (freeedStudents.length) {
     const currStudent = freeedStudents.shift();
 
+    if(studentChoices[currStudent] == undefined) continue;
+
     if (studentChoices[currStudent].length <= choiceNumber[currStudent]) {
       unallocated.push(currStudent);
       continue;
