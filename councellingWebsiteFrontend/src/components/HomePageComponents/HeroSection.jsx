@@ -15,7 +15,7 @@ const HeroSection = () => {
         className="relative max-w-4xl mx-auto"
       >
         <h1 className="text-5xl font-extrabold text-gray-800">
-          Welcome to <span className="text-blue-600">JoSAA 2025</span>
+          Welcome to <span className="text-blue-600">Councelling 2025</span>
         </h1>
         <p className="mt-4 text-lg text-gray-700">
           The Joint Seat Allocation Authority (JoSAA) 2025 has been set up by

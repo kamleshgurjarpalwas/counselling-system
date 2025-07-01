@@ -27,23 +27,23 @@ const navItems = [
     name: "Information",
     dropdown: [
       { name: "Timetable", path: "/timetable" },
-      { name: "Business Rules", path: "/rules" },
-      { name: "Restricted Institutes", path: "/restricted-institutes" },
+      // { name: "Business Rules", path: "/rules" },
+      // { name: "Restricted Institutes", path: "/restricted-institutes" },
     ],
   },
   {
     name: "eServices",
     dropdown: [
       { name: "Seat Matrix", path: "/seat-matrix" },
-      { name: "Participating Institutes", path: "/institutes" },
+      // { name: "Participating Institutes", path: "/institutes" },
       { name: "Opening & Closing Rank", path: "/opening-closing-rank" },
     ],
   },
-  { name: "Documents", path: "/documents" },
-  { name: "Institute Tour", path: "/institute-tour" },
-  { name: "Helpdesk", path: "/helpdesk" },
-  { name: "Contact Us", path: "/contact" },
-  { name: "About Us", path: "/about" },
+  // { name: "Documents", path: "/documents" },
+  // { name: "Institute Tour", path: "/institute-tour" },
+  // { name: "Helpdesk", path: "/helpdesk" },
+  // { name: "Contact Us", path: "/contact" },
+  // { name: "About Us", path: "/about" },
 ];
 
 const Navbar = () => {

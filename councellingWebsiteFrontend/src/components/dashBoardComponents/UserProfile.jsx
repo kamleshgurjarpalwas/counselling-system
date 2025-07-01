@@ -11,6 +11,7 @@ const UserDashboard = () => {
   const [result, setResult] = useState(null);
   const [resultLoading, setResultLoading] = useState(false);
   const [resultError, setResultError] = useState(null);
+  const [isUnAlloted, setIsUnAlloted] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -52,6 +53,10 @@ const UserDashboard = () => {
       if (response.status === 200) {
         setResult(response.data);
       }
+
+      if (response.data.success === false) {
+        setIsUnAlloted(true);
+      }
     } catch (err) {
       console.error("Failed to fetch result:", err);
       setResultError(
@@ -83,6 +88,14 @@ const UserDashboard = () => {
     return (
       <div className="text-center text-xl font-semibold py-10">
         No user data available.
+      </div>
+    );
+  }
+
+  if (isUnAlloted) {
+    return (
+      <div className="text-center text-xl font-semibold text-red-600 py-10">
+        You are not allotted any college.
       </div>
     );
   }

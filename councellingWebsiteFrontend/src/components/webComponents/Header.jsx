@@ -10,7 +10,7 @@ function Header() {
 
       <div className="flex space-x-2">
         <LucideGraduationCap size={32} />
-        <span className="text-xl font-bold">JOSSA Counseling</span>
+        <span className="text-xl font-bold">Counselling</span>
       </div>
     </header>
   );

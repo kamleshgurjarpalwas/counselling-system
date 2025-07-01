@@ -4,9 +4,9 @@ import { motion, useInView } from "framer-motion";
 
 const faqs = [
   {
-    question: "How can I register for JOSAA Counseling?",
+    question: "How can I register for Counselling?",
     answer:
-      "You can register on the official JOSAA portal by providing your JEE rank and necessary documents.",
+      "You can register on the official portal by providing your JEE rank and necessary documents.",
   },
   {
     question: "What are the eligibility criteria for seat allotment?",
